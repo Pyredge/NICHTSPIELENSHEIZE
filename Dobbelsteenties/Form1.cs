@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,26 +17,21 @@ namespace Dobbelsteenties
         {
             InitializeComponent();
         }
-        int dice1;
-        int dice2;
-        int dice3;
-        int dice4;
-        int dice5;
+        public int[] Dice = new int[5];
+        
         private void gooien_Click(object sender, EventArgs e)
         {
                 Random rnd = new Random();
-            //dice1 = rnd.Next(1, 7);
-            dice1 = 1;
-                dice2 = rnd.Next(1, 7);
-                dice3 = rnd.Next(1, 7);
-                dice4 = rnd.Next(1, 7);
-                dice5 = rnd.Next(1, 7);
-            
-
-            switch (dice1)
+                Dice[0] = rnd.Next(1, 7);
+                Dice[1] = rnd.Next(1, 7);
+                Dice[2] = rnd.Next(1, 7);
+                Dice[3] = rnd.Next(1, 7);
+                Dice[4] = rnd.Next(1, 7);
+    
+            switch (Dice[0])
             {
                 case 1:
-                    Dice1.ImageLocation = @"C:\Resources\Dice 1.png";
+                    Dice1.ImageLocation = @"C:\Users\ankid\source\repos\Yahtzee\Dobbelsteenties\Resources\Dice 1.png" ;
                     break;
                 case 2:
                     Dice1.ImageLocation = @"C:\Users\ankid\source\repos\Yahtzee\Dobbelsteenties\Resources\Dice 2.png";
@@ -54,7 +50,7 @@ namespace Dobbelsteenties
                     break;
 
             }
-            switch (dice2)
+            switch (Dice[1])
             {
                 case 1:
                     Dice2.ImageLocation = @"C:\Users\ankid\source\repos\Yahtzee\Dobbelsteenties\Resources\Dice 1.png";
@@ -76,7 +72,7 @@ namespace Dobbelsteenties
                     break;
 
             }
-            switch (dice3)
+            switch (Dice[2])
             {
                 case 1:
                     Dice3.ImageLocation = @"C:\Users\ankid\source\repos\Yahtzee\Dobbelsteenties\Resources\Dice 1.png";
@@ -98,7 +94,7 @@ namespace Dobbelsteenties
                     break;
 
             }
-            switch (dice4)
+            switch (Dice[3])
             {
                 case 1:
                     Dice4.ImageLocation = @"C:\Users\ankid\source\repos\Yahtzee\Dobbelsteenties\Resources\Dice 1.png";
@@ -120,7 +116,7 @@ namespace Dobbelsteenties
                     break;
 
             }
-            switch (dice5)
+            switch (Dice[4])
             {
                 case 1:
                     Dice5.ImageLocation = @"C:\Users\ankid\source\repos\Yahtzee\Dobbelsteenties\Resources\Dice 1.png";
@@ -140,25 +136,30 @@ namespace Dobbelsteenties
                 case 6:
                     Dice5.ImageLocation = @"C:\Users\ankid\source\repos\Yahtzee\Dobbelsteenties\Resources\Dice 6.png";
                     break;
-
             }
 
         }
-
-       
-        private void timer_Tick(object sender, EventArgs e)
-        {
-
-        }
-
         private void Dice1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void checken_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < Dice.Length; i++)
+            {
+                for (int j = 1; j < Dice.Length; j++)
+                {
+                    if (Dice[i]==Dice[j])
+                    {
+                        textBox.Text = Convert.ToString(Dice[i]);
+                    }
+                }
+            }
 
+            var groups = Dice.GroupBy(v => v);
+            foreach (var group in groups)
+                textBox.Text = (Convert.ToString(group.Key, group.Count()));
         }
     }
 }
