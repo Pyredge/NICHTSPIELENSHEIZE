@@ -156,10 +156,6 @@ namespace Dobbelsteenties
                     }
                 }
             }
-
-            var groups = Dice.GroupBy(v => v);
-            foreach (var group in groups)
-                textBox.Text = (Convert.ToString(group.Key, group.Count()));
         }
     }
 }
