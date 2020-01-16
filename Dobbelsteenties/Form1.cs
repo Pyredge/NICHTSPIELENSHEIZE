@@ -15,6 +15,8 @@ namespace Dobbelsteenties
     {
 
         #region Declaration
+        //Hier heb ik ze een variable gegeven
+
 
         Image[] diceImages;
         int[] dice;
@@ -28,6 +30,8 @@ namespace Dobbelsteenties
         }
         int[] diceResults;
 
+        // Ik heb dit hier zo aangemaakt, zodat wanneer je op de knop "gooien!" klikt dat die die codes kan uitvoeren allemaal.
+
         private void gooien_Click(object sender, EventArgs e)
         {
             RollDice();
@@ -35,6 +39,8 @@ namespace Dobbelsteenties
             ResetResults();
 
         }
+
+        //Dit stukje code is dat wanneer je op "Gooien!" klikt dat er random dobbelstenen komen
 
         private void RollDice()
         {
@@ -72,6 +78,8 @@ namespace Dobbelsteenties
                 Dice5.Image = diceImages[dice[4]];
             }
         }
+        //deze stukje code berekent het resultaat van wat je hebt als je de dobbelstenen hebt gegooid
+        //ook heb ik allemaal bool gemaakt, zodat ik ze op true kan zetten IF deze dobbelstenen true zijn
 
         private void GetResults()
         {
@@ -144,6 +152,9 @@ namespace Dobbelsteenties
                         break;
                 }
             }
+
+            //Hier laat die dus zien welke resultaat je krijgt van de dobbelstenen
+
             if (fiveKind)
                 lbl_result.Text = "Five of a Kind";
             else if (fourKind)
@@ -173,6 +184,9 @@ namespace Dobbelsteenties
             else if (haveOne)
                 lbl_result.Text = "One High";
         }
+
+
+        //Ook wanneer je op de knop "Gooien!" klikt reset hij automatisch de dobbelstenen zodat hij niet door berekent. Zo kan die ook het aantal keren berekenen.
 
         private void ResetResults()
         {

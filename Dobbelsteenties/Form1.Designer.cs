@@ -111,7 +111,7 @@ namespace Dobbelsteenties
             // 
             this.lbl_result.AutoSize = true;
             this.lbl_result.Font = new System.Drawing.Font("High Tower Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result.Location = new System.Drawing.Point(288, 194);
+            this.lbl_result.Location = new System.Drawing.Point(315, 194);
             this.lbl_result.Name = "lbl_result";
             this.lbl_result.Size = new System.Drawing.Size(220, 32);
             this.lbl_result.TabIndex = 6;
