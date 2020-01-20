@@ -19,6 +19,11 @@ namespace Dobbelsteenties
         int fullhouse;
         int yahtzee;
         int vierGelijk;
+        bool HoldConditionDice1;
+        bool HoldConditionDice2;
+        bool HoldConditionDice3;
+        bool HoldConditionDice4;
+        bool HoldConditionDice5;
 
         int kansen;
         #region Declaration
@@ -66,6 +71,7 @@ namespace Dobbelsteenties
                 switch (dice[i])
                 {
                     case 1:
+
                         diceResults[0]++;
                         break;
                     case 2:
@@ -86,11 +92,27 @@ namespace Dobbelsteenties
                 }
             }
             {
-                Dice1.Image = diceImages[dice[0]];
-                Dice2.Image = diceImages[dice[1]];
-                Dice3.Image = diceImages[dice[2]];
-                Dice4.Image = diceImages[dice[3]];
-                Dice5.Image = diceImages[dice[4]];
+                if (HoldConditionDice1 == false)
+                {
+                    Dice1.Image = diceImages[dice[0]];
+                }
+                if (HoldConditionDice2 == false)
+                {
+                    Dice2.Image = diceImages[dice[1]];
+                }
+                if (HoldConditionDice3 == false)
+                {
+                    Dice3.Image = diceImages[dice[2]];
+                }
+                if (HoldConditionDice4 == false)
+                {
+                    Dice4.Image = diceImages[dice[3]];
+                }
+                if (HoldConditionDice5 == false)
+                {
+                    Dice5.Image = diceImages[dice[4]];
+                }
+
             }
         }
         //deze stukje code berekent het resultaat van wat je hebt als je de dobbelstenen hebt gegooid
@@ -243,6 +265,89 @@ namespace Dobbelsteenties
             rand = new Random();
             diceResults = new int[6] { 0, 0, 0, 0, 0, 0 };
         }
+        #region hold button
+        private void HoldButtonDice1_Click(object sender, EventArgs e)
+        {
+            if (HoldConditionDice1 == false)
+            {
+                HoldConditionDice1 = true;
+                HoldButtonDice1.Text = ("Holding..");
+                HoldButtonDice1.ForeColor = Color.Crimson;
+
+            }
+            else if (HoldConditionDice1 == true)
+            {
+                HoldConditionDice1 = false;
+                HoldButtonDice1.Text = ("Hold");
+                HoldButtonDice1.ForeColor = Color.Teal;
+            }
+        }
+        private void HoldButtonDice2_Click(object sender, EventArgs e)
+        {
+            if (HoldConditionDice2 == false)
+            {
+                HoldConditionDice2 = true;
+                HoldButtonDice2.Text = ("Holding..");
+                HoldButtonDice2.ForeColor = Color.Crimson;
+            }
+            else if (HoldConditionDice2 == true)
+            {
+                HoldConditionDice2 = false;
+                HoldButtonDice2.Text = ("Hold");
+                HoldButtonDice2.ForeColor = Color.Teal;
+            }
+        }
+        private void HoldButtonDice3_Click(object sender, EventArgs e)
+        {
+            if (HoldConditionDice3 == false)
+            {
+                HoldConditionDice3 = true;
+                HoldButtonDice3.Text = ("Holding..");
+                HoldButtonDice3.ForeColor = Color.Crimson;
+            }
+            else if (HoldConditionDice3 == true)
+            {
+                HoldConditionDice3 = false;
+                HoldButtonDice3.Text = ("Hold");
+                HoldButtonDice3.ForeColor = Color.Teal;
+            }
+        }
+        private void HoldButtonDice4_Click(object sender, EventArgs e)
+        {
+            if (HoldConditionDice4 == false)  // Hij kijkt eerst of de HoldCondition is gelijk aan ''false'', als hij het zal uitvoeren zonder te kijken zal de gebruiker niet weten of hij de dobbelstenen ''hold''.
+            {
+                HoldConditionDice4 = true;// hij veranderd de conditie naar ''true'', omdat de gebruiker de dobbelstenen wil houden. 
+                HoldButtonDice4.Text = "Holding.."; // Veranderd de Hold button naar ''Holding..", om het makkelijker te maken om te zien of de gebruiker de dobbelstenen op ''hold'' heeft.
+                HoldButtonDice4.ForeColor = Color.Crimson;  // veranderd de "ForeColor'' naar Crimson zodat het makkelijker te zien is of de gebruker de dobbelstenen op ''Hold'' gezet heeft of niet.
+            }
+            else if (HoldConditionDice4 == true) // Hij kijkt eerst of de "hold'' conditie true is, zodat hij niet naar 'hold' veranderd als je juist je dobbelsteen niet wil houden, en de gebruiker verward.
+            {
+                HoldConditionDice4 = false; // Natuurlijk veranderd hij het naar false, omdat de gebruiker de dobbelsteen niet wil houden. Zonder dit zal het programma hetzelfde stuk code uitvoeren.
+                HoldButtonDice4.Text = "Hold";  //Veranderd de text in "HoldButtonDice'' naar "hold" zodat de gebruiker het weet dat hij niet meer de dobbelsteen houd.
+                HoldButtonDice4.ForeColor = Color.Teal; //De button gaat terug naar zijn neutrale kleur, en de gebruiker weet dat het dobbelsteen niet meer wordt gehouden.
+            }
+        }
+        private void HoldButtonDice5_Click(object sender, EventArgs e)
+        {
+            if (HoldConditionDice5 == false)
+            {
+
+                HoldButtonDice5.Text = "Holding..";
+                HoldButtonDice5.ForeColor = Color.Crimson;
+                HoldConditionDice5 = true;
+            }
+            else if (HoldConditionDice5 == true)
+            {
+
+                HoldButtonDice5.Text = "Hold";
+                HoldButtonDice5.ForeColor = Color.Teal;
+                HoldConditionDice5 = false;
+            }
+        }
+        #endregion
+
+
+        #region useless buttons
         private void Dice2_click(object sender, EventArgs e)
         {
 
@@ -302,6 +407,10 @@ namespace Dobbelsteenties
         {
 
         }
+
+        #endregion
+
+
     }
 }
 

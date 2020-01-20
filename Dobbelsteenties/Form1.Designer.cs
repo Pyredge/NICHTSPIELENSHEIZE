@@ -56,6 +56,11 @@ namespace Dobbelsteenties
             this.tweeHighLabel = new System.Windows.Forms.Label();
             this.eenHighLabel = new System.Windows.Forms.Label();
             this.eindScoreLabel = new System.Windows.Forms.Label();
+            this.HoldButtonDice1 = new System.Windows.Forms.Button();
+            this.HoldButtonDice2 = new System.Windows.Forms.Button();
+            this.HoldButtonDice3 = new System.Windows.Forms.Button();
+            this.HoldButtonDice4 = new System.Windows.Forms.Button();
+            this.HoldButtonDice5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice3)).BeginInit();
@@ -323,12 +328,92 @@ namespace Dobbelsteenties
             this.eindScoreLabel.TabIndex = 22;
             this.eindScoreLabel.Text = "EindScore";
             // 
+            // HoldButtonDice1
+            // 
+            this.HoldButtonDice1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.HoldButtonDice1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HoldButtonDice1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HoldButtonDice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoldButtonDice1.ForeColor = System.Drawing.Color.Teal;
+            this.HoldButtonDice1.Location = new System.Drawing.Point(46, 120);
+            this.HoldButtonDice1.Name = "HoldButtonDice1";
+            this.HoldButtonDice1.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice1.TabIndex = 27;
+            this.HoldButtonDice1.Text = "Hold";
+            this.HoldButtonDice1.UseVisualStyleBackColor = false;
+            this.HoldButtonDice1.Click += new System.EventHandler(this.HoldButtonDice1_Click);
+            // 
+            // HoldButtonDice2
+            // 
+            this.HoldButtonDice2.BackColor = System.Drawing.Color.LavenderBlush;
+            this.HoldButtonDice2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HoldButtonDice2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HoldButtonDice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoldButtonDice2.ForeColor = System.Drawing.Color.Teal;
+            this.HoldButtonDice2.Location = new System.Drawing.Point(183, 119);
+            this.HoldButtonDice2.Name = "HoldButtonDice2";
+            this.HoldButtonDice2.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice2.TabIndex = 26;
+            this.HoldButtonDice2.Text = "Hold";
+            this.HoldButtonDice2.UseVisualStyleBackColor = false;
+            this.HoldButtonDice2.Click += new System.EventHandler(this.HoldButtonDice2_Click);
+            // 
+            // HoldButtonDice3
+            // 
+            this.HoldButtonDice3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.HoldButtonDice3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HoldButtonDice3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HoldButtonDice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoldButtonDice3.ForeColor = System.Drawing.Color.Teal;
+            this.HoldButtonDice3.Location = new System.Drawing.Point(326, 120);
+            this.HoldButtonDice3.Name = "HoldButtonDice3";
+            this.HoldButtonDice3.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice3.TabIndex = 25;
+            this.HoldButtonDice3.Text = "Hold";
+            this.HoldButtonDice3.UseVisualStyleBackColor = false;
+            this.HoldButtonDice3.Click += new System.EventHandler(this.HoldButtonDice3_Click);
+            // 
+            // HoldButtonDice4
+            // 
+            this.HoldButtonDice4.BackColor = System.Drawing.Color.LavenderBlush;
+            this.HoldButtonDice4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HoldButtonDice4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HoldButtonDice4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoldButtonDice4.ForeColor = System.Drawing.Color.Teal;
+            this.HoldButtonDice4.Location = new System.Drawing.Point(462, 120);
+            this.HoldButtonDice4.Name = "HoldButtonDice4";
+            this.HoldButtonDice4.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice4.TabIndex = 24;
+            this.HoldButtonDice4.Text = "Hold";
+            this.HoldButtonDice4.UseVisualStyleBackColor = false;
+            this.HoldButtonDice4.Click += new System.EventHandler(this.HoldButtonDice4_Click);
+            // 
+            // HoldButtonDice5
+            // 
+            this.HoldButtonDice5.BackColor = System.Drawing.Color.LavenderBlush;
+            this.HoldButtonDice5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.HoldButtonDice5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HoldButtonDice5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HoldButtonDice5.ForeColor = System.Drawing.Color.Teal;
+            this.HoldButtonDice5.Location = new System.Drawing.Point(603, 120);
+            this.HoldButtonDice5.Name = "HoldButtonDice5";
+            this.HoldButtonDice5.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice5.TabIndex = 23;
+            this.HoldButtonDice5.Text = "Hold";
+            this.HoldButtonDice5.UseVisualStyleBackColor = false;
+            this.HoldButtonDice5.Click += new System.EventHandler(this.HoldButtonDice5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkMagenta;
             this.ClientSize = new System.Drawing.Size(1063, 568);
+            this.Controls.Add(this.HoldButtonDice1);
+            this.Controls.Add(this.HoldButtonDice2);
+            this.Controls.Add(this.HoldButtonDice3);
+            this.Controls.Add(this.HoldButtonDice4);
+            this.Controls.Add(this.HoldButtonDice5);
             this.Controls.Add(this.eindScoreLabel);
             this.Controls.Add(this.eenHighLabel);
             this.Controls.Add(this.tweeHighLabel);
@@ -398,6 +483,11 @@ namespace Dobbelsteenties
         private System.Windows.Forms.Label tweeHighLabel;
         private System.Windows.Forms.Label eenHighLabel;
         private System.Windows.Forms.Label eindScoreLabel;
+        private System.Windows.Forms.Button HoldButtonDice1;
+        private System.Windows.Forms.Button HoldButtonDice2;
+        private System.Windows.Forms.Button HoldButtonDice3;
+        private System.Windows.Forms.Button HoldButtonDice4;
+        private System.Windows.Forms.Button HoldButtonDice5;
     }
 }
 
