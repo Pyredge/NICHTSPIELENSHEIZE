@@ -408,9 +408,14 @@ namespace Dobbelsteenties
 
         }
 
+
         #endregion
 
-
+        private void Spelregels_Click(object sender, EventArgs e)
+        {
+            Spelregels openForm = new Spelregels();
+            openForm.Show();
+        }
     }
 }
 

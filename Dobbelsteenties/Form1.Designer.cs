@@ -61,6 +61,7 @@ namespace Dobbelsteenties
             this.HoldButtonDice3 = new System.Windows.Forms.Button();
             this.HoldButtonDice4 = new System.Windows.Forms.Button();
             this.HoldButtonDice5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice3)).BeginInit();
@@ -403,12 +404,24 @@ namespace Dobbelsteenties
             this.HoldButtonDice5.UseVisualStyleBackColor = false;
             this.HoldButtonDice5.Click += new System.EventHandler(this.HoldButtonDice5_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button2.Location = new System.Drawing.Point(927, 498);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 58);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Spelregels";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Spelregels_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkMagenta;
             this.ClientSize = new System.Drawing.Size(1063, 568);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.HoldButtonDice1);
             this.Controls.Add(this.HoldButtonDice2);
             this.Controls.Add(this.HoldButtonDice3);
@@ -488,6 +501,7 @@ namespace Dobbelsteenties
         private System.Windows.Forms.Button HoldButtonDice3;
         private System.Windows.Forms.Button HoldButtonDice4;
         private System.Windows.Forms.Button HoldButtonDice5;
+        private System.Windows.Forms.Button button2;
     }
 }
 
