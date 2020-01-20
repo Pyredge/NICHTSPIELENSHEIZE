@@ -253,12 +253,12 @@ namespace Dobbelsteenties
             //https://stackoverflow.com/questions/17193825/loading-picturebox-image-from-resource-file-with-path-part-3
 
             diceImages = new Image[7];
-            diceImages[1] = Image.FromFile(@"..\..\Properties\Resources\dice1.png");
-            diceImages[2] = Image.FromFile(@"..\..\Properties\Resources\dice2.png");
-            diceImages[3] = Image.FromFile(@"..\..\Properties\Resources\dice3.png");
-            diceImages[4] = Image.FromFile(@"..\..\Properties\Resources\dice4.png");
-            diceImages[5] = Image.FromFile(@"..\..\Properties\Resources\dice5.png");
-            diceImages[6] = Image.FromFile(@"..\..\Properties\Resources\dice6.png");
+            diceImages[1] = Image.FromFile(@"Properties\Resources\dice1.png");
+            diceImages[2] = Image.FromFile(@"Properties\Resources\dice2.png");
+            diceImages[3] = Image.FromFile(@"Properties\Resources\dice3.png");
+            diceImages[4] = Image.FromFile(@"Properties\Resources\dice4.png");
+            diceImages[5] = Image.FromFile(@"Properties\Resources\dice5.png");
+            diceImages[6] = Image.FromFile(@"Properties\Resources\dice6.png");
 
             dice = new int[5] {0, 0, 0, 0, 0 };
 

@@ -90,12 +90,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Properties\Resources\dice1.png" />
-    <Content Include="Properties\Resources\dice2.png" />
-    <Content Include="Properties\Resources\dice3.png" />
-    <Content Include="Properties\Resources\dice4.png" />
-    <Content Include="Properties\Resources\dice5.png" />
-    <Content Include="Properties\Resources\dice6.png" />
+    <Content Include="Properties\Resources\dice1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Resources\dice2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Resources\dice3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Resources\dice4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Resources\dice5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Resources\dice6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\spelregels 2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
