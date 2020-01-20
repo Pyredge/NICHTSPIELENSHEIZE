@@ -41,21 +41,21 @@ namespace Dobbelsteenties
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lbl_result = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.vijfGelijkeLabel = new System.Windows.Forms.Label();
+            this.vierGelijkeLabel = new System.Windows.Forms.Label();
+            this.hogeStraatLabel = new System.Windows.Forms.Label();
+            this.lageStraatLabel = new System.Windows.Forms.Label();
+            this.fullHouseLabel = new System.Windows.Forms.Label();
+            this.drieGelijkeLabel = new System.Windows.Forms.Label();
+            this.tweePaarLabel = new System.Windows.Forms.Label();
+            this.eenPaarLabel = new System.Windows.Forms.Label();
+            this.sixHighLabel = new System.Windows.Forms.Label();
+            this.vijfHighLabel = new System.Windows.Forms.Label();
+            this.vierHighLabel = new System.Windows.Forms.Label();
+            this.drieHighLabel = new System.Windows.Forms.Label();
+            this.tweeHighLabel = new System.Windows.Forms.Label();
+            this.eenHighLabel = new System.Windows.Forms.Label();
+            this.eindScoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice3)).BeginInit();
@@ -67,7 +67,7 @@ namespace Dobbelsteenties
             // 
             this.button1.BackColor = System.Drawing.Color.MediumOrchid;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(321, 274);
+            this.button1.Location = new System.Drawing.Point(436, 369);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 70);
             this.button1.TabIndex = 0;
@@ -133,7 +133,7 @@ namespace Dobbelsteenties
             // 
             this.lbl_result.AutoSize = true;
             this.lbl_result.Font = new System.Drawing.Font("High Tower Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result.Location = new System.Drawing.Point(315, 194);
+            this.lbl_result.Location = new System.Drawing.Point(404, 316);
             this.lbl_result.Name = "lbl_result";
             this.lbl_result.Size = new System.Drawing.Size(220, 32);
             this.lbl_result.TabIndex = 6;
@@ -156,193 +156,194 @@ namespace Dobbelsteenties
     "gh\r\nOne High";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label1
+            // vijfGelijkeLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label1.Location = new System.Drawing.Point(124, 192);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "0";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.vijfGelijkeLabel.AutoSize = true;
+            this.vijfGelijkeLabel.BackColor = System.Drawing.Color.White;
+            this.vijfGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.vijfGelijkeLabel.Location = new System.Drawing.Point(124, 192);
+            this.vijfGelijkeLabel.Name = "vijfGelijkeLabel";
+            this.vijfGelijkeLabel.Size = new System.Drawing.Size(16, 17);
+            this.vijfGelijkeLabel.TabIndex = 8;
+            this.vijfGelijkeLabel.Text = "0";
+            this.vijfGelijkeLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // label2
+            // vierGelijkeLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label2.Location = new System.Drawing.Point(124, 209);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "0";
+            this.vierGelijkeLabel.AutoSize = true;
+            this.vierGelijkeLabel.BackColor = System.Drawing.Color.White;
+            this.vierGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.vierGelijkeLabel.Location = new System.Drawing.Point(124, 209);
+            this.vierGelijkeLabel.Name = "vierGelijkeLabel";
+            this.vierGelijkeLabel.Size = new System.Drawing.Size(16, 17);
+            this.vierGelijkeLabel.TabIndex = 9;
+            this.vierGelijkeLabel.Text = "0";
             // 
-            // label3
+            // hogeStraatLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label3.Location = new System.Drawing.Point(124, 225);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 17);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "label3  ";
+            this.hogeStraatLabel.AutoSize = true;
+            this.hogeStraatLabel.BackColor = System.Drawing.Color.White;
+            this.hogeStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.hogeStraatLabel.Location = new System.Drawing.Point(124, 225);
+            this.hogeStraatLabel.Name = "hogeStraatLabel";
+            this.hogeStraatLabel.Size = new System.Drawing.Size(16, 17);
+            this.hogeStraatLabel.TabIndex = 10;
+            this.hogeStraatLabel.Text = "0";
             // 
-            // label4
+            // lageStraatLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label4.Location = new System.Drawing.Point(124, 242);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "label4  ";
+            this.lageStraatLabel.AutoSize = true;
+            this.lageStraatLabel.BackColor = System.Drawing.Color.White;
+            this.lageStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.lageStraatLabel.Location = new System.Drawing.Point(124, 242);
+            this.lageStraatLabel.Name = "lageStraatLabel";
+            this.lageStraatLabel.Size = new System.Drawing.Size(16, 17);
+            this.lageStraatLabel.TabIndex = 11;
+            this.lageStraatLabel.Text = "0";
             // 
-            // label5
+            // fullHouseLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label5.Location = new System.Drawing.Point(124, 259);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "label5  ";
+            this.fullHouseLabel.AutoSize = true;
+            this.fullHouseLabel.BackColor = System.Drawing.Color.White;
+            this.fullHouseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.fullHouseLabel.Location = new System.Drawing.Point(124, 259);
+            this.fullHouseLabel.Name = "fullHouseLabel";
+            this.fullHouseLabel.Size = new System.Drawing.Size(16, 17);
+            this.fullHouseLabel.TabIndex = 12;
+            this.fullHouseLabel.Text = "0";
+            this.fullHouseLabel.Click += new System.EventHandler(this.fullHouseLabel_Click);
             // 
-            // label6
+            // drieGelijkeLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label6.Location = new System.Drawing.Point(124, 276);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 17);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "label6  ";
+            this.drieGelijkeLabel.AutoSize = true;
+            this.drieGelijkeLabel.BackColor = System.Drawing.Color.White;
+            this.drieGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.drieGelijkeLabel.Location = new System.Drawing.Point(124, 276);
+            this.drieGelijkeLabel.Name = "drieGelijkeLabel";
+            this.drieGelijkeLabel.Size = new System.Drawing.Size(16, 17);
+            this.drieGelijkeLabel.TabIndex = 13;
+            this.drieGelijkeLabel.Text = "0";
             // 
-            // label7
+            // tweePaarLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label7.Location = new System.Drawing.Point(124, 293);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 17);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "label7  ";
+            this.tweePaarLabel.AutoSize = true;
+            this.tweePaarLabel.BackColor = System.Drawing.Color.White;
+            this.tweePaarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tweePaarLabel.Location = new System.Drawing.Point(124, 293);
+            this.tweePaarLabel.Name = "tweePaarLabel";
+            this.tweePaarLabel.Size = new System.Drawing.Size(16, 17);
+            this.tweePaarLabel.TabIndex = 14;
+            this.tweePaarLabel.Text = "0";
             // 
-            // label8
+            // eenPaarLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label8.Location = new System.Drawing.Point(124, 310);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 17);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "label8  ";
+            this.eenPaarLabel.AutoSize = true;
+            this.eenPaarLabel.BackColor = System.Drawing.Color.White;
+            this.eenPaarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.eenPaarLabel.Location = new System.Drawing.Point(124, 310);
+            this.eenPaarLabel.Name = "eenPaarLabel";
+            this.eenPaarLabel.Size = new System.Drawing.Size(16, 17);
+            this.eenPaarLabel.TabIndex = 15;
+            this.eenPaarLabel.Text = "0";
             // 
-            // label9
+            // sixHighLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label9.Location = new System.Drawing.Point(124, 327);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 17);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "label9  ";
+            this.sixHighLabel.AutoSize = true;
+            this.sixHighLabel.BackColor = System.Drawing.Color.White;
+            this.sixHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.sixHighLabel.Location = new System.Drawing.Point(124, 327);
+            this.sixHighLabel.Name = "sixHighLabel";
+            this.sixHighLabel.Size = new System.Drawing.Size(16, 17);
+            this.sixHighLabel.TabIndex = 16;
+            this.sixHighLabel.Text = "0";
             // 
-            // label10
+            // vijfHighLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label10.Location = new System.Drawing.Point(124, 344);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 17);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "label10";
+            this.vijfHighLabel.AutoSize = true;
+            this.vijfHighLabel.BackColor = System.Drawing.Color.White;
+            this.vijfHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.vijfHighLabel.Location = new System.Drawing.Point(124, 344);
+            this.vijfHighLabel.Name = "vijfHighLabel";
+            this.vijfHighLabel.Size = new System.Drawing.Size(16, 17);
+            this.vijfHighLabel.TabIndex = 17;
+            this.vijfHighLabel.Text = "0";
             // 
-            // label11
+            // vierHighLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label11.Location = new System.Drawing.Point(124, 361);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 17);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "label11";
+            this.vierHighLabel.AutoSize = true;
+            this.vierHighLabel.BackColor = System.Drawing.Color.White;
+            this.vierHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.vierHighLabel.Location = new System.Drawing.Point(124, 361);
+            this.vierHighLabel.Name = "vierHighLabel";
+            this.vierHighLabel.Size = new System.Drawing.Size(16, 17);
+            this.vierHighLabel.TabIndex = 18;
+            this.vierHighLabel.Text = "0";
             // 
-            // label12
+            // drieHighLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.White;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label12.Location = new System.Drawing.Point(124, 378);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 17);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "label12";
+            this.drieHighLabel.AutoSize = true;
+            this.drieHighLabel.BackColor = System.Drawing.Color.White;
+            this.drieHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.drieHighLabel.Location = new System.Drawing.Point(124, 378);
+            this.drieHighLabel.Name = "drieHighLabel";
+            this.drieHighLabel.Size = new System.Drawing.Size(16, 17);
+            this.drieHighLabel.TabIndex = 19;
+            this.drieHighLabel.Text = "0";
             // 
-            // label13
+            // tweeHighLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label13.Location = new System.Drawing.Point(124, 395);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 17);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "label13";
+            this.tweeHighLabel.AutoSize = true;
+            this.tweeHighLabel.BackColor = System.Drawing.Color.White;
+            this.tweeHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.tweeHighLabel.Location = new System.Drawing.Point(124, 395);
+            this.tweeHighLabel.Name = "tweeHighLabel";
+            this.tweeHighLabel.Size = new System.Drawing.Size(16, 17);
+            this.tweeHighLabel.TabIndex = 20;
+            this.tweeHighLabel.Text = "0";
             // 
-            // label14
+            // eenHighLabel
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label14.Location = new System.Drawing.Point(124, 412);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 17);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "label14";
+            this.eenHighLabel.AutoSize = true;
+            this.eenHighLabel.BackColor = System.Drawing.Color.White;
+            this.eenHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.eenHighLabel.Location = new System.Drawing.Point(124, 412);
+            this.eenHighLabel.Name = "eenHighLabel";
+            this.eenHighLabel.Size = new System.Drawing.Size(16, 17);
+            this.eenHighLabel.TabIndex = 21;
+            this.eenHighLabel.Text = "0";
             // 
-            // label15
+            // eindScoreLabel
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.White;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label15.Location = new System.Drawing.Point(124, 456);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(54, 17);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "label15";
+            this.eindScoreLabel.AutoSize = true;
+            this.eindScoreLabel.BackColor = System.Drawing.Color.White;
+            this.eindScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.eindScoreLabel.Location = new System.Drawing.Point(93, 456);
+            this.eindScoreLabel.Name = "eindScoreLabel";
+            this.eindScoreLabel.Size = new System.Drawing.Size(73, 17);
+            this.eindScoreLabel.TabIndex = 22;
+            this.eindScoreLabel.Text = "EindScore";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkMagenta;
-            this.ClientSize = new System.Drawing.Size(967, 493);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1063, 568);
+            this.Controls.Add(this.eindScoreLabel);
+            this.Controls.Add(this.eenHighLabel);
+            this.Controls.Add(this.tweeHighLabel);
+            this.Controls.Add(this.drieHighLabel);
+            this.Controls.Add(this.vierHighLabel);
+            this.Controls.Add(this.vijfHighLabel);
+            this.Controls.Add(this.sixHighLabel);
+            this.Controls.Add(this.eenPaarLabel);
+            this.Controls.Add(this.tweePaarLabel);
+            this.Controls.Add(this.drieGelijkeLabel);
+            this.Controls.Add(this.fullHouseLabel);
+            this.Controls.Add(this.lageStraatLabel);
+            this.Controls.Add(this.hogeStraatLabel);
+            this.Controls.Add(this.vierGelijkeLabel);
+            this.Controls.Add(this.vijfGelijkeLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbl_result);
             this.Controls.Add(this.Dice5);
@@ -382,21 +383,21 @@ namespace Dobbelsteenties
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lbl_result;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label vijfGelijkeLabel;
+        private System.Windows.Forms.Label vierGelijkeLabel;
+        private System.Windows.Forms.Label hogeStraatLabel;
+        private System.Windows.Forms.Label lageStraatLabel;
+        private System.Windows.Forms.Label fullHouseLabel;
+        private System.Windows.Forms.Label drieGelijkeLabel;
+        private System.Windows.Forms.Label tweePaarLabel;
+        private System.Windows.Forms.Label eenPaarLabel;
+        private System.Windows.Forms.Label sixHighLabel;
+        private System.Windows.Forms.Label vijfHighLabel;
+        private System.Windows.Forms.Label vierHighLabel;
+        private System.Windows.Forms.Label drieHighLabel;
+        private System.Windows.Forms.Label tweeHighLabel;
+        private System.Windows.Forms.Label eenHighLabel;
+        private System.Windows.Forms.Label eindScoreLabel;
     }
 }
 

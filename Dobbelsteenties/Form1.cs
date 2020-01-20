@@ -13,7 +13,14 @@ namespace Dobbelsteenties
 {
     public partial class Form1 : Form
     {
+        int eenPaar;
+        int tweePaar;
+        int driePaar;
+        int fullhouse;
+        int yahtzee;
+        int vierGelijk;
 
+        int kansen;
         #region Declaration
         //Hier heb ik ze een variable gegeven
 
@@ -34,11 +41,17 @@ namespace Dobbelsteenties
 
         private void gooien_Click(object sender, EventArgs e)
         {
+            kansen =+1;
+            if (kansen == 3)
+            {
+                eenPaar = 0;
+                fullhouse = 0;
+                yahtzee = 0;
+            }
             RollDice();
             GetResults();
             ResetResults();
             ScoreResults();
-            
 
         }
 
@@ -157,22 +170,37 @@ namespace Dobbelsteenties
 
             //Hier laat die dus zien welke resultaat je krijgt van de dobbelstenen
 
+
             if (fiveKind)
-                lbl_result.Text = "Five of a Kind";
+            {
+
+                yahtzee = 50;
+                vijfGelijkeLabel.Text = Convert.ToString(yahtzee);
+
+            }
             else if (fourKind)
-                lbl_result.Text = "Four of a Kind";
+            {
+                vierGelijk = 25;
+                vierGelijkeLabel.Text = Convert.ToString(eenPaar);
+            }
             else if (highStraight)
                 lbl_result.Text = "High Straight";
             else if (lowStraight)
                 lbl_result.Text = "Low Straight";
             else if (fullHouse)
-                lbl_result.Text = "Full House";
+            {
+                fullhouse = 25;
+                fullHouseLabel.Text = Convert.ToString(fullhouse);
+            }
             else if (threeKind)
                 lbl_result.Text = "three of a Kind";
             else if (twoPair)
                 lbl_result.Text = "Two Pair";
             else if (onePair)
-                lbl_result.Text = "One Pair";
+            {
+                eenPaar = 25;
+                eenPaarLabel.Text = Convert.ToString(eenPaar);
+            }
             else if (haveSix)
                 lbl_result.Text = "Six High";
             else if (haveFive)
@@ -267,7 +295,12 @@ namespace Dobbelsteenties
         }
         private void ScoreResults()
         {
-            for (int w = 0; );
+
+        }
+
+        private void fullHouseLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
