@@ -64,7 +64,7 @@ namespace Dobbelsteenties
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button1.BackColor = System.Drawing.Color.DarkGreen;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(436, 369);
             this.button1.Name = "button1";
@@ -136,6 +136,7 @@ namespace Dobbelsteenties
             // lbl_result
             // 
             this.lbl_result.AutoSize = true;
+            this.lbl_result.BackColor = System.Drawing.Color.Transparent;
             this.lbl_result.Font = new System.Drawing.Font("High Tower Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_result.Location = new System.Drawing.Point(404, 316);
             this.lbl_result.Name = "lbl_result";
@@ -248,6 +249,7 @@ namespace Dobbelsteenties
             this.eindScoreLabel.Size = new System.Drawing.Size(73, 17);
             this.eindScoreLabel.TabIndex = 22;
             this.eindScoreLabel.Text = "EindScore";
+            this.eindScoreLabel.Click += new System.EventHandler(this.eindScoreLabel_Click);
             // 
             // HoldButtonDice1
             // 

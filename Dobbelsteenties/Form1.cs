@@ -123,12 +123,14 @@ namespace Dobbelsteenties
             bool fiveKind = false, fourKind = false, highStraight = false,
                 lowStraight = false, fullHouse = false, threeKind = false, twoPair = false,
                 onePair = false, haveSix = false, haveFive = false, haveFour = false, haveThree = false,
-                haveTwo = false, haveOne = false;
+                haveTwo = false, haveOne = false, yahtzee = false;
 
             for (int i = 0; i < diceResults.Length; i++)
             {
                 if (diceResults[i] == 5)
                     fiveKind = true;
+                if (fiveKind)
+                    yahtzeeLabel.Text = "50";
                 else if (diceResults[i] == 4)
                     fourKind = true;
                 else if (diceResults[1] == 1 &&
@@ -137,12 +139,19 @@ namespace Dobbelsteenties
                          diceResults[4] == 1 &&
                          diceResults[5] == 1)
                     highStraight = true;
-                else if (diceResults[1] == 1 &&
+                if (highStraight)
+                    groteStraatLabel.Text = "40";
+
+                else if (diceResults[0] == 1 &&
+                         diceResults[1] == 1 &&
                          diceResults[2] == 1 &&
                          diceResults[3] == 1 &&
-                         diceResults[4] == 1 &&
-                         diceResults[5] == 1)
+                         diceResults[4] == 1)
                     lowStraight = true;
+
+                if (lowStraight)
+                    kleineStraatLabel.Text = "30";
+
                 else if (diceResults[i] == 3)
                 {
                     threeKind = true;
@@ -151,6 +160,9 @@ namespace Dobbelsteenties
                     {
                         if (diceResults[j] == 2)
                             fullHouse = true;
+
+                        if (fullHouse)
+                            fullHouseLabel.Text = "25";
                     }
                 }
                 else if (diceResults[i] == 2)
@@ -195,7 +207,7 @@ namespace Dobbelsteenties
 
             if (fiveKind)
             {
-                lbl_result.Text = "Five of a Kind";
+                lbl_result.Text = "Yahtzee!";
             }
             else if (fourKind)
             {
@@ -429,6 +441,11 @@ namespace Dobbelsteenties
         {
             Spelregels openForm = new Spelregels();
             openForm.Show();
+        }
+
+        private void eindScoreLabel_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
