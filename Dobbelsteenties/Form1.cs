@@ -225,19 +225,17 @@ namespace Dobbelsteenties
             }
             else if (fourKind)
             {
-                lbl_result.Text = "Four of a Kind";
+                vierGelijk = 25;
+                vierGelijkeLabel.Text = Convert.ToString(eenPaar);
             }
             else if (highStraight)
-            {
                 lbl_result.Text = "High Straight";
-            }
             else if (lowStraight)
-            {
                 lbl_result.Text = "Low Straight";
-            }
             else if (fullHouse)
             {
-                lbl_result.Text = "Full House";
+                fullhouse = 25;
+                fullHouseLabel.Text = Convert.ToString(fullhouse);
             }
             else if (threeKind)
             {
@@ -245,37 +243,23 @@ namespace Dobbelsteenties
                 lbl_result.Text = "Drie Gelijke!";
             }
             else if (twoPair)
-            {
                 lbl_result.Text = "Two Pair";
-            }
             else if (onePair)
             {
                 eenPaar = 25;
             }
             else if (haveSix)
-            {
                 lbl_result.Text = "Six High";
-            }
             else if (haveFive)
-            {
                 lbl_result.Text = "Five High";
-            }
             else if (haveFour)
-            {
                 lbl_result.Text = "Four High";
-            }
             else if (haveThree)
-            {
                 lbl_result.Text = "Three High";
-            }
             else if (haveTwo)
-            {
                 lbl_result.Text = "Two high";
-            }
             else if (haveOne)
-            {
                 lbl_result.Text = "One High";
-            }
         }
 
 

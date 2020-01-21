@@ -41,13 +41,12 @@ namespace Dobbelsteenties
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.lbl_result = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.yahtzeeLabel = new System.Windows.Forms.Label();
-            this.groteStraatLabel = new System.Windows.Forms.Label();
-            this.kleineStraatLabel = new System.Windows.Forms.Label();
+            this.vijfGelijkeLabel = new System.Windows.Forms.Label();
             this.vierGelijkeLabel = new System.Windows.Forms.Label();
+            this.hogeStraatLabel = new System.Windows.Forms.Label();
+            this.lageStraatLabel = new System.Windows.Forms.Label();
             this.fullHouseLabel = new System.Windows.Forms.Label();
             this.drieGelijkeLabel = new System.Windows.Forms.Label();
-            this.kansLabel = new System.Windows.Forms.Label();
             this.eindScoreLabel = new System.Windows.Forms.Label();
             this.HoldButtonDice1 = new System.Windows.Forms.Button();
             this.HoldButtonDice2 = new System.Windows.Forms.Button();
@@ -77,7 +76,6 @@ namespace Dobbelsteenties
             // 
             // Dice1
             // 
-            this.Dice1.BackColor = System.Drawing.Color.Transparent;
             this.Dice1.Image = ((System.Drawing.Image)(resources.GetObject("Dice1.Image")));
             this.Dice1.Location = new System.Drawing.Point(70, 60);
             this.Dice1.Name = "Dice1";
@@ -88,7 +86,6 @@ namespace Dobbelsteenties
             // 
             // Dice2
             // 
-            this.Dice2.BackColor = System.Drawing.Color.Transparent;
             this.Dice2.Image = ((System.Drawing.Image)(resources.GetObject("Dice2.Image")));
             this.Dice2.Location = new System.Drawing.Point(207, 60);
             this.Dice2.Name = "Dice2";
@@ -99,7 +96,6 @@ namespace Dobbelsteenties
             // 
             // Dice3
             // 
-            this.Dice3.BackColor = System.Drawing.Color.Transparent;
             this.Dice3.Image = ((System.Drawing.Image)(resources.GetObject("Dice3.Image")));
             this.Dice3.Location = new System.Drawing.Point(373, 60);
             this.Dice3.Name = "Dice3";
@@ -110,7 +106,6 @@ namespace Dobbelsteenties
             // 
             // Dice4
             // 
-            this.Dice4.BackColor = System.Drawing.Color.Transparent;
             this.Dice4.Image = ((System.Drawing.Image)(resources.GetObject("Dice4.Image")));
             this.Dice4.Location = new System.Drawing.Point(486, 60);
             this.Dice4.Name = "Dice4";
@@ -121,7 +116,6 @@ namespace Dobbelsteenties
             // 
             // Dice5
             // 
-            this.Dice5.BackColor = System.Drawing.Color.Transparent;
             this.Dice5.Image = ((System.Drawing.Image)(resources.GetObject("Dice5.Image")));
             this.Dice5.Location = new System.Drawing.Point(627, 60);
             this.Dice5.Name = "Dice5";
@@ -154,56 +148,33 @@ namespace Dobbelsteenties
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(106, 247);
+            this.textBox1.Size = new System.Drawing.Size(106, 125);
             this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "Five of a Kind\r\nFour of a Kind\r\nHigh Straight\r\nLow Straight\r\nFull House \r\nThree o" +
-    "f a Kind\r\nTwo Pair\r\nOne Pair\r\nSix High\r\nFive High\r\nFour High\r\nThree High\r\nTwo Hi" +
-    "gh\r\nOne High";
+            this.textBox1.Text = "Yahtzee\r\nGrote Straat\r\nKleine Straat\r\nFull House \r\nDrie Gelijke\r\nVier Gelijke\r\nKa" +
+    "ns";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // yahtzeeLabel
+            // vijfGelijkeLabel
             // 
             this.vijfGelijkeLabel.AutoSize = true;
             this.vijfGelijkeLabel.BackColor = System.Drawing.Color.White;
             this.vijfGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.vijfGelijkeLabel.Location = new System.Drawing.Point(124, 192);
+            this.vijfGelijkeLabel.Location = new System.Drawing.Point(124, 194);
             this.vijfGelijkeLabel.Name = "vijfGelijkeLabel";
             this.vijfGelijkeLabel.Size = new System.Drawing.Size(16, 17);
             this.vijfGelijkeLabel.TabIndex = 8;
             this.vijfGelijkeLabel.Text = "0";
             this.vijfGelijkeLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // groteStraatLabel
-            // 
-            this.groteStraatLabel.AutoSize = true;
-            this.groteStraatLabel.BackColor = System.Drawing.Color.White;
-            this.groteStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.groteStraatLabel.Location = new System.Drawing.Point(124, 209);
-            this.groteStraatLabel.Name = "groteStraatLabel";
-            this.groteStraatLabel.Size = new System.Drawing.Size(16, 17);
-            this.groteStraatLabel.TabIndex = 9;
-            this.groteStraatLabel.Text = "0";
-            // 
-            // kleineStraatLabel
-            // 
-            this.kleineStraatLabel.AutoSize = true;
-            this.kleineStraatLabel.BackColor = System.Drawing.Color.White;
-            this.kleineStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.kleineStraatLabel.Location = new System.Drawing.Point(124, 225);
-            this.kleineStraatLabel.Name = "kleineStraatLabel";
-            this.kleineStraatLabel.Size = new System.Drawing.Size(16, 17);
-            this.kleineStraatLabel.TabIndex = 10;
-            this.kleineStraatLabel.Text = "0";
-            // 
             // vierGelijkeLabel
             // 
             this.vierGelijkeLabel.AutoSize = true;
             this.vierGelijkeLabel.BackColor = System.Drawing.Color.White;
             this.vierGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.vierGelijkeLabel.Location = new System.Drawing.Point(124, 209);
+            this.vierGelijkeLabel.Location = new System.Drawing.Point(124, 279);
             this.vierGelijkeLabel.Name = "vierGelijkeLabel";
             this.vierGelijkeLabel.Size = new System.Drawing.Size(16, 17);
-            this.vierGelijkeLabel.TabIndex = 11;
+            this.vierGelijkeLabel.TabIndex = 9;
             this.vierGelijkeLabel.Text = "0";
             // 
             // hogeStraatLabel
@@ -211,7 +182,7 @@ namespace Dobbelsteenties
             this.hogeStraatLabel.AutoSize = true;
             this.hogeStraatLabel.BackColor = System.Drawing.Color.White;
             this.hogeStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.hogeStraatLabel.Location = new System.Drawing.Point(124, 225);
+            this.hogeStraatLabel.Location = new System.Drawing.Point(124, 211);
             this.hogeStraatLabel.Name = "hogeStraatLabel";
             this.hogeStraatLabel.Size = new System.Drawing.Size(16, 17);
             this.hogeStraatLabel.TabIndex = 10;
@@ -222,7 +193,7 @@ namespace Dobbelsteenties
             this.lageStraatLabel.AutoSize = true;
             this.lageStraatLabel.BackColor = System.Drawing.Color.White;
             this.lageStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.lageStraatLabel.Location = new System.Drawing.Point(124, 242);
+            this.lageStraatLabel.Location = new System.Drawing.Point(124, 228);
             this.lageStraatLabel.Name = "lageStraatLabel";
             this.lageStraatLabel.Size = new System.Drawing.Size(16, 17);
             this.lageStraatLabel.TabIndex = 11;
@@ -233,7 +204,7 @@ namespace Dobbelsteenties
             this.fullHouseLabel.AutoSize = true;
             this.fullHouseLabel.BackColor = System.Drawing.Color.White;
             this.fullHouseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.fullHouseLabel.Location = new System.Drawing.Point(124, 259);
+            this.fullHouseLabel.Location = new System.Drawing.Point(124, 245);
             this.fullHouseLabel.Name = "fullHouseLabel";
             this.fullHouseLabel.Size = new System.Drawing.Size(16, 17);
             this.fullHouseLabel.TabIndex = 12;
@@ -245,106 +216,19 @@ namespace Dobbelsteenties
             this.drieGelijkeLabel.AutoSize = true;
             this.drieGelijkeLabel.BackColor = System.Drawing.Color.White;
             this.drieGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.drieGelijkeLabel.Location = new System.Drawing.Point(124, 276);
+            this.drieGelijkeLabel.Location = new System.Drawing.Point(124, 262);
             this.drieGelijkeLabel.Name = "drieGelijkeLabel";
             this.drieGelijkeLabel.Size = new System.Drawing.Size(16, 17);
             this.drieGelijkeLabel.TabIndex = 13;
             this.drieGelijkeLabel.Text = "0";
-            // 
-            // tweePaarLabel
-            // 
-            this.tweePaarLabel.AutoSize = true;
-            this.tweePaarLabel.BackColor = System.Drawing.Color.White;
-            this.tweePaarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tweePaarLabel.Location = new System.Drawing.Point(124, 293);
-            this.tweePaarLabel.Name = "tweePaarLabel";
-            this.tweePaarLabel.Size = new System.Drawing.Size(16, 17);
-            this.tweePaarLabel.TabIndex = 14;
-            this.tweePaarLabel.Text = "0";
-            // 
-            // eenPaarLabel
-            // 
-            this.eenPaarLabel.AutoSize = true;
-            this.eenPaarLabel.BackColor = System.Drawing.Color.White;
-            this.eenPaarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.eenPaarLabel.Location = new System.Drawing.Point(124, 310);
-            this.eenPaarLabel.Name = "eenPaarLabel";
-            this.eenPaarLabel.Size = new System.Drawing.Size(16, 17);
-            this.eenPaarLabel.TabIndex = 15;
-            this.eenPaarLabel.Text = "0";
-            // 
-            // sixHighLabel
-            // 
-            this.sixHighLabel.AutoSize = true;
-            this.sixHighLabel.BackColor = System.Drawing.Color.White;
-            this.sixHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.sixHighLabel.Location = new System.Drawing.Point(124, 327);
-            this.sixHighLabel.Name = "sixHighLabel";
-            this.sixHighLabel.Size = new System.Drawing.Size(16, 17);
-            this.sixHighLabel.TabIndex = 16;
-            this.sixHighLabel.Text = "0";
-            // 
-            // vijfHighLabel
-            // 
-            this.vijfHighLabel.AutoSize = true;
-            this.vijfHighLabel.BackColor = System.Drawing.Color.White;
-            this.vijfHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.vijfHighLabel.Location = new System.Drawing.Point(124, 344);
-            this.vijfHighLabel.Name = "vijfHighLabel";
-            this.vijfHighLabel.Size = new System.Drawing.Size(16, 17);
-            this.vijfHighLabel.TabIndex = 17;
-            this.vijfHighLabel.Text = "0";
-            // 
-            // vierHighLabel
-            // 
-            this.vierHighLabel.AutoSize = true;
-            this.vierHighLabel.BackColor = System.Drawing.Color.White;
-            this.vierHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.vierHighLabel.Location = new System.Drawing.Point(124, 361);
-            this.vierHighLabel.Name = "vierHighLabel";
-            this.vierHighLabel.Size = new System.Drawing.Size(16, 17);
-            this.vierHighLabel.TabIndex = 18;
-            this.vierHighLabel.Text = "0";
-            // 
-            // drieHighLabel
-            // 
-            this.drieHighLabel.AutoSize = true;
-            this.drieHighLabel.BackColor = System.Drawing.Color.White;
-            this.drieHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.drieHighLabel.Location = new System.Drawing.Point(124, 378);
-            this.drieHighLabel.Name = "drieHighLabel";
-            this.drieHighLabel.Size = new System.Drawing.Size(16, 17);
-            this.drieHighLabel.TabIndex = 19;
-            this.drieHighLabel.Text = "0";
-            // 
-            // tweeHighLabel
-            // 
-            this.tweeHighLabel.AutoSize = true;
-            this.tweeHighLabel.BackColor = System.Drawing.Color.White;
-            this.tweeHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.tweeHighLabel.Location = new System.Drawing.Point(124, 395);
-            this.tweeHighLabel.Name = "tweeHighLabel";
-            this.tweeHighLabel.Size = new System.Drawing.Size(16, 17);
-            this.tweeHighLabel.TabIndex = 20;
-            this.tweeHighLabel.Text = "0";
-            // 
-            // eenHighLabel
-            // 
-            this.eenHighLabel.AutoSize = true;
-            this.eenHighLabel.BackColor = System.Drawing.Color.White;
-            this.eenHighLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.eenHighLabel.Location = new System.Drawing.Point(124, 412);
-            this.eenHighLabel.Name = "eenHighLabel";
-            this.eenHighLabel.Size = new System.Drawing.Size(16, 17);
-            this.eenHighLabel.TabIndex = 21;
-            this.eenHighLabel.Text = "0";
+            this.drieGelijkeLabel.Click += new System.EventHandler(this.drieGelijkeLabel_Click);
             // 
             // eindScoreLabel
             // 
             this.eindScoreLabel.AutoSize = true;
             this.eindScoreLabel.BackColor = System.Drawing.Color.White;
             this.eindScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.eindScoreLabel.Location = new System.Drawing.Point(93, 456);
+            this.eindScoreLabel.Location = new System.Drawing.Point(92, 331);
             this.eindScoreLabel.Name = "eindScoreLabel";
             this.eindScoreLabel.Size = new System.Drawing.Size(13, 17);
             this.eindScoreLabel.TabIndex = 22;
@@ -452,8 +336,6 @@ namespace Dobbelsteenties
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkMagenta;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1063, 568);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -463,20 +345,12 @@ namespace Dobbelsteenties
             this.Controls.Add(this.HoldButtonDice4);
             this.Controls.Add(this.HoldButtonDice5);
             this.Controls.Add(this.eindScoreLabel);
-            this.Controls.Add(this.eenHighLabel);
-            this.Controls.Add(this.tweeHighLabel);
-            this.Controls.Add(this.drieHighLabel);
-            this.Controls.Add(this.vierHighLabel);
-            this.Controls.Add(this.vijfHighLabel);
-            this.Controls.Add(this.sixHighLabel);
-            this.Controls.Add(this.eenPaarLabel);
-            this.Controls.Add(this.tweePaarLabel);
             this.Controls.Add(this.drieGelijkeLabel);
             this.Controls.Add(this.fullHouseLabel);
+            this.Controls.Add(this.lageStraatLabel);
+            this.Controls.Add(this.hogeStraatLabel);
             this.Controls.Add(this.vierGelijkeLabel);
-            this.Controls.Add(this.kleineStraatLabel);
-            this.Controls.Add(this.groteStraatLabel);
-            this.Controls.Add(this.yahtzeeLabel);
+            this.Controls.Add(this.vijfGelijkeLabel);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbl_result);
             this.Controls.Add(this.Dice5);
@@ -516,20 +390,12 @@ namespace Dobbelsteenties
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lbl_result;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label yahtzeeLabel;
-        private System.Windows.Forms.Label groteStraatLabel;
-        private System.Windows.Forms.Label kleineStraatLabel;
+        private System.Windows.Forms.Label vijfGelijkeLabel;
         private System.Windows.Forms.Label vierGelijkeLabel;
+        private System.Windows.Forms.Label hogeStraatLabel;
+        private System.Windows.Forms.Label lageStraatLabel;
         private System.Windows.Forms.Label fullHouseLabel;
         private System.Windows.Forms.Label drieGelijkeLabel;
-        private System.Windows.Forms.Label tweePaarLabel;
-        private System.Windows.Forms.Label eenPaarLabel;
-        private System.Windows.Forms.Label sixHighLabel;
-        private System.Windows.Forms.Label vijfHighLabel;
-        private System.Windows.Forms.Label vierHighLabel;
-        private System.Windows.Forms.Label drieHighLabel;
-        private System.Windows.Forms.Label tweeHighLabel;
-        private System.Windows.Forms.Label eenHighLabel;
         private System.Windows.Forms.Label eindScoreLabel;
         private System.Windows.Forms.Button HoldButtonDice1;
         private System.Windows.Forms.Button HoldButtonDice2;
