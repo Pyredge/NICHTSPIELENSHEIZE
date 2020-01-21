@@ -195,46 +195,60 @@ namespace Dobbelsteenties
 
             if (fiveKind)
             {
-
-                yahtzee = 50;
-                vijfGelijkeLabel.Text = Convert.ToString(yahtzee);
-
+                lbl_result.Text = "Five of a Kind";
             }
             else if (fourKind)
             {
-                vierGelijk = 25;
-                vierGelijkeLabel.Text = Convert.ToString(eenPaar);
+                lbl_result.Text = "Four of a Kind";
             }
             else if (highStraight)
+            {
                 lbl_result.Text = "High Straight";
+            }
             else if (lowStraight)
+            {
                 lbl_result.Text = "Low Straight";
+            }
             else if (fullHouse)
             {
-                fullhouse = 25;
-                fullHouseLabel.Text = Convert.ToString(fullhouse);
+                lbl_result.Text = "Full House";
             }
             else if (threeKind)
-                lbl_result.Text = "three of a Kind";
+            {
+                lbl_result.Text = "Three of a Kind";
+            }
             else if (twoPair)
+            {
                 lbl_result.Text = "Two Pair";
+            }
             else if (onePair)
             {
-                eenPaar = 25;
-                eenPaarLabel.Text = Convert.ToString(eenPaar);
+                lbl_result.Text = "One Pair";
             }
             else if (haveSix)
+            {
                 lbl_result.Text = "Six High";
+            }
             else if (haveFive)
+            {
                 lbl_result.Text = "Five High";
+            }
             else if (haveFour)
+            {
                 lbl_result.Text = "Four High";
+            }
             else if (haveThree)
+            {
                 lbl_result.Text = "Three High";
+            }
             else if (haveTwo)
+            {
                 lbl_result.Text = "Two high";
+            }
             else if (haveOne)
+            {
                 lbl_result.Text = "One High";
+            }
         }
 
 
