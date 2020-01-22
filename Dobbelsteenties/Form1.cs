@@ -115,8 +115,8 @@ namespace Dobbelsteenties
 
             }
         }
-        //deze stukje code berekent het resultaat van wat je hebt als je de dobbelstenen hebt gegooid
         //ook heb ik allemaal bool gemaakt, zodat ik ze op true kan zetten IF deze dobbelstenen true zijn
+        //dit stukje code berekent wat je hebt gegooid als je de dobbelstenen gooit
 
         private void GetResults()
         {
@@ -196,13 +196,13 @@ namespace Dobbelsteenties
                     case 5:
                         haveTwo = true;
                         break;
-                    case 6:
+                                            case 6:
                         haveOne = true;
                         break;
                 }
             }
 
-            //Hier laat die dus zien welke resultaat je krijgt van de dobbelstenen
+            //Hier laat die dus zien welke resultaat je krijgt van de dobbelstenen.
 
 
             if (fiveKind)
