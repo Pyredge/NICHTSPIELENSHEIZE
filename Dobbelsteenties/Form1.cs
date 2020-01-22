@@ -275,7 +275,7 @@ namespace Dobbelsteenties
         }
 
 
-        //Ook wanneer je op de knop "Gooien!" klikt reset hij automatisch de dobbelstenen zodat hij niet door berekent. Zo kan die ook het aantal keren berekenen.
+        //Ook wanneer je op de knop "Gooien!" klikt reset hij automatisch de 00 dobbelstenen zodat hij niet door berekent. Zo kan die ook het aantal keren berekenen.
 
         private void ResetResults()
         {
