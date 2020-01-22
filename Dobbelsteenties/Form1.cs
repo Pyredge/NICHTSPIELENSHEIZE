@@ -13,10 +13,9 @@ namespace Dobbelsteenties
 {
     public partial class Form1 : Form
     {
-        #region de ints bool and strings,
-        int AantalWorpen;
-        int antwoord;
         int eenPaar;
+        int tweePaar;
+        int driePaar;
         int fullhouse;
         int yahtzee;
         int vierGelijk;
@@ -25,36 +24,20 @@ namespace Dobbelsteenties
         bool HoldConditionDice3;
         bool HoldConditionDice4;
         bool HoldConditionDice5;
-        bool fiveKind = false, fourKind = false, highStraight = false,
-                lowStraight = false, fullHouse = false, threeKind = false, twoPair = false,
-                onePair = false, haveSix = false, haveFive = false, haveFour = false, haveThree = false,
-                haveTwo = false, haveOne = false, kans = false;
 
         int kansen;
-        int dice1;
-        int dice2;
-        int dice3;
-        int dice4;
-        int dice5;
-        int dice6;
-        #endregion
         #region Declaration
         //Hier heb ik ze een variable gegeven
 
 
         Image[] diceImages;
         int[] dice;
-
         Random rand;
 
         #endregion
 
         public Form1()
         {
-            AantalWorpen = 3;
-
-
-            
             InitializeComponent();
         }
         int[] diceResults;
@@ -63,24 +46,18 @@ namespace Dobbelsteenties
 
         private void gooien_Click(object sender, EventArgs e)
         {
-            aantalWorpenDisplay.Text = Convert.ToString(AantalWorpen);
-            if (AantalWorpen > 0)
+            kansen =+1;
+            if (kansen == 3)
             {
-                AantalWorpen = AantalWorpen - 1;
-                RollDice();
-                GetResults();
-                ResetResults();
-                ScoreResults();
-                
+                eenPaar = 0;
+                fullhouse = 0;
+                yahtzee = 0;
             }
+            RollDice();
+            GetResults();
+            ResetResults();
+            ScoreResults();
 
-            else
-            {
-                button1.Enabled = false;
-                
-            }
-            
-            
         }
 
         //Dit stukje code is dat wanneer je op "Gooien!" klikt dat er random dobbelstenen komen
@@ -89,65 +66,50 @@ namespace Dobbelsteenties
         {
             for (int i = 0; i < dice.Length; i++)
             {
-                dice[i] = rand.Next(1, 7);
-                dice1 = dice[0];
-                dice2 = dice[1];
-                dice3 = dice[2];
-                dice4 = dice[3];
-                dice5 = dice[4];
+                dice[i] = rand.Next(1, 6 + 1);
 
                 switch (dice[i])
                 {
                     case 1:
+
                         diceResults[0]++;
-                        
                         break;
                     case 2:
                         diceResults[1]++;
-                        
                         break;
                     case 3:
                         diceResults[2]++;
-                        
                         break;
                     case 4:
                         diceResults[3]++;
-                        
                         break;
                     case 5:
                         diceResults[4]++;
-                        
                         break;
                     case 6:
                         diceResults[5]++;
-                        
                         break;
                 }
             }
             {
                 if (HoldConditionDice1 == false)
                 {
-                    
                     Dice1.Image = diceImages[dice[0]];
                 }
                 if (HoldConditionDice2 == false)
                 {
-                    
                     Dice2.Image = diceImages[dice[1]];
                 }
                 if (HoldConditionDice3 == false)
                 {
-                    
                     Dice3.Image = diceImages[dice[2]];
                 }
                 if (HoldConditionDice4 == false)
                 {
-                   
                     Dice4.Image = diceImages[dice[3]];
                 }
                 if (HoldConditionDice5 == false)
                 {
-                    
                     Dice5.Image = diceImages[dice[4]];
                 }
 
@@ -158,15 +120,17 @@ namespace Dobbelsteenties
 
         private void GetResults()
         {
+            bool fiveKind = false, fourKind = false, highStraight = false,
+                lowStraight = false, fullHouse = false, threeKind = false, twoPair = false,
+                onePair = false, haveSix = false, haveFive = false, haveFour = false, haveThree = false,
+                haveTwo = false, haveOne = false;
+
             for (int i = 0; i < diceResults.Length; i++)
             {
                 if (diceResults[i] == 5)
                     fiveKind = true;
                 else if (diceResults[i] == 4)
-                {
-                    vierGelijk = dice1 + dice2 + dice3 + dice4 + dice5;
                     fourKind = true;
-                }
                 else if (diceResults[1] == 1 &&
                          diceResults[2] == 1 &&
                          diceResults[3] == 1 &&
@@ -181,7 +145,6 @@ namespace Dobbelsteenties
                     lowStraight = true;
                 else if (diceResults[i] == 3)
                 {
-                    antwoord = dice1 + dice2 + dice3 + dice4 + dice5;
                     threeKind = true;
 
                     for (int j = 0; j < diceResults.Length; j++)
@@ -201,7 +164,6 @@ namespace Dobbelsteenties
                     }
                 }
             }
-
             for (int i = 0; i < dice.Length; i++)
             {
                 dice[i] = rand.Next(1, 6 + 1);
@@ -236,46 +198,47 @@ namespace Dobbelsteenties
 
                 yahtzee = 50;
                 vijfGelijkeLabel.Text = Convert.ToString(yahtzee);
-                lbl_result.Text = Convert.ToString("Yahtzee!");
-                yahtzee = 0;
 
             }
             else if (fourKind)
             {
-                vierGelijkeLabel.Text = Convert.ToString(vierGelijk);
-                lbl_result.Text = Convert.ToString("VierGelijk!");
-                vierGelijk = 0;
+                vierGelijk = 25;
+                vierGelijkeLabel.Text = Convert.ToString(eenPaar);
             }
             else if (highStraight)
-            {
-                int Hogestraat = 40;
-                hogeStraatLabel.Text = Convert.ToString(Hogestraat);
-                lbl_result.Text = Convert.ToString("Hoge Straat!");
-                
-
-            }
+                lbl_result.Text = "High Straight";
             else if (lowStraight)
-            {
-                int KleineStraat = 30;
-                lageStraatLabel.Text = Convert.ToString(KleineStraat);
-                lbl_result.Text = Convert.ToString("Kleine Straat!");
-            }
+                lbl_result.Text = "Low Straight";
             else if (fullHouse)
             {
                 fullhouse = 25;
                 fullHouseLabel.Text = Convert.ToString(fullhouse);
-                lbl_result.Text = Convert.ToString("Fullhouse!");
             }
             else if (threeKind)
+                lbl_result.Text = "three of a Kind";
+            else if (twoPair)
+                lbl_result.Text = "Two Pair";
+            else if (onePair)
             {
-                drieGelijkeLabel.Text = Convert.ToString(antwoord);
-                lbl_result.Text = "Drie Gelijke!";
-                antwoord = 0;
+                eenPaar = 25;
+                eenPaarLabel.Text = Convert.ToString(eenPaar);
             }
+            else if (haveSix)
+                lbl_result.Text = "Six High";
+            else if (haveFive)
+                lbl_result.Text = "Five High";
+            else if (haveFour)
+                lbl_result.Text = "Four High";
+            else if (haveThree)
+                lbl_result.Text = "Three High";
+            else if (haveTwo)
+                lbl_result.Text = "Two high";
+            else if (haveOne)
+                lbl_result.Text = "One High";
         }
 
 
-        //Ook wanneer je op de knop "Gooien!" klikt reset hij automatisch de 00 dobbelstenen zodat hij niet door berekent. Zo kan die ook het aantal keren berekenen.
+        //Ook wanneer je op de knop "Gooien!" klikt reset hij automatisch de dobbelstenen zodat hij niet door berekent. Zo kan die ook het aantal keren berekenen.
 
         private void ResetResults()
         {
@@ -290,14 +253,15 @@ namespace Dobbelsteenties
             //https://stackoverflow.com/questions/17193825/loading-picturebox-image-from-resource-file-with-path-part-3
 
             diceImages = new Image[7];
-            diceImages[1] = Image.FromFile(@"Properties\Resources\dice1.png");
-            diceImages[2] = Image.FromFile(@"Properties\Resources\dice2.png");
-            diceImages[3] = Image.FromFile(@"Properties\Resources\dice3.png");
-            diceImages[4] = Image.FromFile(@"Properties\Resources\dice4.png");
-            diceImages[5] = Image.FromFile(@"Properties\Resources\dice5.png");
-            diceImages[6] = Image.FromFile(@"Properties\Resources\dice6.png");
+            diceImages[1] = Image.FromFile(@"..\..\Properties\Resources\dice1.png");
+            diceImages[2] = Image.FromFile(@"..\..\Properties\Resources\dice2.png");
+            diceImages[3] = Image.FromFile(@"..\..\Properties\Resources\dice3.png");
+            diceImages[4] = Image.FromFile(@"..\..\Properties\Resources\dice4.png");
+            diceImages[5] = Image.FromFile(@"..\..\Properties\Resources\dice5.png");
+            diceImages[6] = Image.FromFile(@"..\..\Properties\Resources\dice6.png");
 
-            dice = new int[5] { 0, 0, 0, 0, 0 };
+            dice = new int[5] {0, 0, 0, 0, 0 };
+
             rand = new Random();
             diceResults = new int[6] { 0, 0, 0, 0, 0, 0 };
         }
@@ -380,28 +344,40 @@ namespace Dobbelsteenties
                 HoldConditionDice5 = false;
             }
         }
+        #endregion
 
-        private void Reset_Click(object sender, EventArgs e)
+
+        #region useless buttons
+        private void Dice2_click(object sender, EventArgs e)
         {
-            button1.Enabled = true;
-            ResetResults();
-            AantalWorpen = 3;
-            drieGelijkeLabel.Text = "0";
-            vierGelijkeLabel.Text = "0";
-            fullHouseLabel.Text = "0";
-            hogeStraatLabel.Text = "0";
-            lageStraatLabel.Text = "0";
-            vijfGelijkeLabel.Text = "0";
-            lbl_result.Text = "Gooien!";
 
+        }
+
+        private void Dice3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dice4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dice5_Click(object sender, EventArgs e)
+        {
 
         }
 
 
-        #endregion
+        private void timer_Tick(object sender, EventArgs e)
+        {
 
-        #region useless buttons
+        }
 
+        private void Dice1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -424,7 +400,9 @@ namespace Dobbelsteenties
         }
         private void ScoreResults()
         {
+
         }
+
         private void fullHouseLabel_Click(object sender, EventArgs e)
         {
 
@@ -433,17 +411,10 @@ namespace Dobbelsteenties
 
         #endregion
 
-        private void Spelregels_Click(object sender, EventArgs e)
-        {
-            Spelregels openForm = new Spelregels();
-            openForm.Show();
-        }
-
-        private void drieGelijkeLabel_Click(object sender, EventArgs e)
+        private void lageStraatLabel_Click(object sender, EventArgs e)
         {
 
         }
-
     }
 }
 
