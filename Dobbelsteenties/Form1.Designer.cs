@@ -30,7 +30,6 @@ namespace Dobbelsteenties
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.Dice1 = new System.Windows.Forms.PictureBox();
@@ -38,7 +37,6 @@ namespace Dobbelsteenties
             this.Dice3 = new System.Windows.Forms.PictureBox();
             this.Dice4 = new System.Windows.Forms.PictureBox();
             this.Dice5 = new System.Windows.Forms.PictureBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.lbl_result = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.vijfGelijkeLabel = new System.Windows.Forms.Label();
@@ -55,6 +53,8 @@ namespace Dobbelsteenties
             this.HoldButtonDice5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Reset = new System.Windows.Forms.Button();
+            this.aantalWorpenDisplay = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice3)).BeginInit();
@@ -82,7 +82,6 @@ namespace Dobbelsteenties
             this.Dice1.Size = new System.Drawing.Size(107, 101);
             this.Dice1.TabIndex = 1;
             this.Dice1.TabStop = false;
-            this.Dice1.Click += new System.EventHandler(this.Dice1_Click);
             // 
             // Dice2
             // 
@@ -92,7 +91,6 @@ namespace Dobbelsteenties
             this.Dice2.Size = new System.Drawing.Size(107, 101);
             this.Dice2.TabIndex = 2;
             this.Dice2.TabStop = false;
-            this.Dice2.Click += new System.EventHandler(this.Dice2_Click);
             // 
             // Dice3
             // 
@@ -102,7 +100,6 @@ namespace Dobbelsteenties
             this.Dice3.Size = new System.Drawing.Size(107, 101);
             this.Dice3.TabIndex = 3;
             this.Dice3.TabStop = false;
-            this.Dice3.Click += new System.EventHandler(this.Dice3_Click);
             // 
             // Dice4
             // 
@@ -112,7 +109,6 @@ namespace Dobbelsteenties
             this.Dice4.Size = new System.Drawing.Size(107, 101);
             this.Dice4.TabIndex = 4;
             this.Dice4.TabStop = false;
-            this.Dice4.Click += new System.EventHandler(this.Dice4_Click);
             // 
             // Dice5
             // 
@@ -122,17 +118,12 @@ namespace Dobbelsteenties
             this.Dice5.Size = new System.Drawing.Size(107, 101);
             this.Dice5.TabIndex = 5;
             this.Dice5.TabStop = false;
-            this.Dice5.Click += new System.EventHandler(this.Dice5_Click);
-            // 
-            // timer
-            // 
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // lbl_result
             // 
             this.lbl_result.AutoSize = true;
             this.lbl_result.Font = new System.Drawing.Font("High Tower Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result.Location = new System.Drawing.Point(395, 368);
+            this.lbl_result.Location = new System.Drawing.Point(386, 386);
             this.lbl_result.Name = "lbl_result";
             this.lbl_result.Size = new System.Drawing.Size(217, 32);
             this.lbl_result.TabIndex = 6;
@@ -331,12 +322,36 @@ namespace Dobbelsteenties
             this.label1.TabIndex = 29;
             this.label1.Text = "0";
             // 
+            // Reset
+            // 
+            this.Reset.Location = new System.Drawing.Point(927, 427);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(124, 58);
+            this.Reset.TabIndex = 30;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // aantalWorpenDisplay
+            // 
+            this.aantalWorpenDisplay.Enabled = false;
+            this.aantalWorpenDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F);
+            this.aantalWorpenDisplay.Location = new System.Drawing.Point(994, 12);
+            this.aantalWorpenDisplay.Multiline = true;
+            this.aantalWorpenDisplay.Name = "aantalWorpenDisplay";
+            this.aantalWorpenDisplay.Size = new System.Drawing.Size(57, 73);
+            this.aantalWorpenDisplay.TabIndex = 31;
+            this.aantalWorpenDisplay.Text = "0";
+            this.aantalWorpenDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkMagenta;
             this.ClientSize = new System.Drawing.Size(1063, 568);
+            this.Controls.Add(this.aantalWorpenDisplay);
+            this.Controls.Add(this.Reset);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.HoldButtonDice1);
@@ -387,7 +402,6 @@ namespace Dobbelsteenties
         private System.Windows.Forms.PictureBox Dice3;
         private System.Windows.Forms.PictureBox Dice4;
         private System.Windows.Forms.PictureBox Dice5;
-        private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label lbl_result;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label vijfGelijkeLabel;
@@ -404,6 +418,8 @@ namespace Dobbelsteenties
         private System.Windows.Forms.Button HoldButtonDice5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.TextBox aantalWorpenDisplay;
     }
 }
 
