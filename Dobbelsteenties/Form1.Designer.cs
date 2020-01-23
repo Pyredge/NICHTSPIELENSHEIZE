@@ -64,8 +64,9 @@ namespace Dobbelsteenties
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button1.BackColor = System.Drawing.Color.DarkGreen;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(412, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 70);
@@ -76,6 +77,7 @@ namespace Dobbelsteenties
             // 
             // Dice1
             // 
+            this.Dice1.BackColor = System.Drawing.Color.Transparent;
             this.Dice1.Image = ((System.Drawing.Image)(resources.GetObject("Dice1.Image")));
             this.Dice1.Location = new System.Drawing.Point(70, 60);
             this.Dice1.Name = "Dice1";
@@ -85,6 +87,7 @@ namespace Dobbelsteenties
             // 
             // Dice2
             // 
+            this.Dice2.BackColor = System.Drawing.Color.Transparent;
             this.Dice2.Image = ((System.Drawing.Image)(resources.GetObject("Dice2.Image")));
             this.Dice2.Location = new System.Drawing.Point(207, 60);
             this.Dice2.Name = "Dice2";
@@ -94,6 +97,7 @@ namespace Dobbelsteenties
             // 
             // Dice3
             // 
+            this.Dice3.BackColor = System.Drawing.Color.Transparent;
             this.Dice3.Image = ((System.Drawing.Image)(resources.GetObject("Dice3.Image")));
             this.Dice3.Location = new System.Drawing.Point(373, 60);
             this.Dice3.Name = "Dice3";
@@ -103,6 +107,7 @@ namespace Dobbelsteenties
             // 
             // Dice4
             // 
+            this.Dice4.BackColor = System.Drawing.Color.Transparent;
             this.Dice4.Image = ((System.Drawing.Image)(resources.GetObject("Dice4.Image")));
             this.Dice4.Location = new System.Drawing.Point(486, 60);
             this.Dice4.Name = "Dice4";
@@ -112,6 +117,7 @@ namespace Dobbelsteenties
             // 
             // Dice5
             // 
+            this.Dice5.BackColor = System.Drawing.Color.Transparent;
             this.Dice5.Image = ((System.Drawing.Image)(resources.GetObject("Dice5.Image")));
             this.Dice5.Location = new System.Drawing.Point(627, 60);
             this.Dice5.Name = "Dice5";
@@ -135,6 +141,7 @@ namespace Dobbelsteenties
             this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Font = new System.Drawing.Font("Candara", 10.75F);
+            this.textBox1.HideSelection = false;
             this.textBox1.Location = new System.Drawing.Point(12, 192);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -221,9 +228,10 @@ namespace Dobbelsteenties
             this.eindScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.eindScoreLabel.Location = new System.Drawing.Point(92, 331);
             this.eindScoreLabel.Name = "eindScoreLabel";
-            this.eindScoreLabel.Size = new System.Drawing.Size(13, 17);
+            this.eindScoreLabel.Size = new System.Drawing.Size(71, 17);
             this.eindScoreLabel.TabIndex = 22;
-            this.eindScoreLabel.Text = "r";
+            this.eindScoreLabel.Text = "Eindscore";
+            this.eindScoreLabel.Click += new System.EventHandler(this.eindScoreLabel_Click);
             // 
             // HoldButtonDice1
             // 
@@ -302,7 +310,7 @@ namespace Dobbelsteenties
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumOrchid;
+            this.button2.BackColor = System.Drawing.Color.DarkGreen;
             this.button2.Location = new System.Drawing.Point(927, 498);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 58);
@@ -346,10 +354,13 @@ namespace Dobbelsteenties
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkMagenta;
-            this.ClientSize = new System.Drawing.Size(1063, 568);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.DarkGreen;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1133, 613);
             this.Controls.Add(this.aantalWorpenDisplay);
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.label1);
@@ -374,6 +385,8 @@ namespace Dobbelsteenties
             this.Controls.Add(this.Dice2);
             this.Controls.Add(this.Dice1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Dobbelen";
             this.Load += new System.EventHandler(this.Form1_Load);
