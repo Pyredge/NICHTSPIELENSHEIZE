@@ -55,6 +55,7 @@ namespace Dobbelsteenties
             this.label1 = new System.Windows.Forms.Label();
             this.Reset = new System.Windows.Forms.Button();
             this.aantalWorpenDisplay = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice3)).BeginInit();
@@ -67,9 +68,10 @@ namespace Dobbelsteenties
             this.button1.BackColor = System.Drawing.Color.DarkGreen;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Lucida Fax", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(412, 421);
+            this.button1.Location = new System.Drawing.Point(515, 526);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 70);
+            this.button1.Size = new System.Drawing.Size(196, 88);
             this.button1.TabIndex = 0;
             this.button1.Text = "Gooien!";
             this.button1.UseVisualStyleBackColor = false;
@@ -79,9 +81,10 @@ namespace Dobbelsteenties
             // 
             this.Dice1.BackColor = System.Drawing.Color.Transparent;
             this.Dice1.Image = ((System.Drawing.Image)(resources.GetObject("Dice1.Image")));
-            this.Dice1.Location = new System.Drawing.Point(70, 60);
+            this.Dice1.Location = new System.Drawing.Point(88, 75);
+            this.Dice1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dice1.Name = "Dice1";
-            this.Dice1.Size = new System.Drawing.Size(107, 101);
+            this.Dice1.Size = new System.Drawing.Size(134, 126);
             this.Dice1.TabIndex = 1;
             this.Dice1.TabStop = false;
             // 
@@ -89,9 +92,10 @@ namespace Dobbelsteenties
             // 
             this.Dice2.BackColor = System.Drawing.Color.Transparent;
             this.Dice2.Image = ((System.Drawing.Image)(resources.GetObject("Dice2.Image")));
-            this.Dice2.Location = new System.Drawing.Point(207, 60);
+            this.Dice2.Location = new System.Drawing.Point(259, 75);
+            this.Dice2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dice2.Name = "Dice2";
-            this.Dice2.Size = new System.Drawing.Size(107, 101);
+            this.Dice2.Size = new System.Drawing.Size(134, 126);
             this.Dice2.TabIndex = 2;
             this.Dice2.TabStop = false;
             // 
@@ -99,9 +103,10 @@ namespace Dobbelsteenties
             // 
             this.Dice3.BackColor = System.Drawing.Color.Transparent;
             this.Dice3.Image = ((System.Drawing.Image)(resources.GetObject("Dice3.Image")));
-            this.Dice3.Location = new System.Drawing.Point(373, 60);
+            this.Dice3.Location = new System.Drawing.Point(466, 75);
+            this.Dice3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dice3.Name = "Dice3";
-            this.Dice3.Size = new System.Drawing.Size(107, 101);
+            this.Dice3.Size = new System.Drawing.Size(134, 126);
             this.Dice3.TabIndex = 3;
             this.Dice3.TabStop = false;
             // 
@@ -109,9 +114,10 @@ namespace Dobbelsteenties
             // 
             this.Dice4.BackColor = System.Drawing.Color.Transparent;
             this.Dice4.Image = ((System.Drawing.Image)(resources.GetObject("Dice4.Image")));
-            this.Dice4.Location = new System.Drawing.Point(486, 60);
+            this.Dice4.Location = new System.Drawing.Point(608, 75);
+            this.Dice4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dice4.Name = "Dice4";
-            this.Dice4.Size = new System.Drawing.Size(107, 101);
+            this.Dice4.Size = new System.Drawing.Size(134, 126);
             this.Dice4.TabIndex = 4;
             this.Dice4.TabStop = false;
             // 
@@ -119,19 +125,22 @@ namespace Dobbelsteenties
             // 
             this.Dice5.BackColor = System.Drawing.Color.Transparent;
             this.Dice5.Image = ((System.Drawing.Image)(resources.GetObject("Dice5.Image")));
-            this.Dice5.Location = new System.Drawing.Point(627, 60);
+            this.Dice5.Location = new System.Drawing.Point(784, 75);
+            this.Dice5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Dice5.Name = "Dice5";
-            this.Dice5.Size = new System.Drawing.Size(107, 101);
+            this.Dice5.Size = new System.Drawing.Size(134, 126);
             this.Dice5.TabIndex = 5;
             this.Dice5.TabStop = false;
+            this.Dice5.Click += new System.EventHandler(this.Dice5_Click);
             // 
             // lbl_result
             // 
             this.lbl_result.AutoSize = true;
             this.lbl_result.Font = new System.Drawing.Font("High Tower Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_result.Location = new System.Drawing.Point(386, 386);
+            this.lbl_result.Location = new System.Drawing.Point(482, 482);
+            this.lbl_result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_result.Name = "lbl_result";
-            this.lbl_result.Size = new System.Drawing.Size(217, 32);
+            this.lbl_result.Size = new System.Drawing.Size(268, 39);
             this.lbl_result.TabIndex = 6;
             this.lbl_result.Text = " Klik op \"Gooien!\"";
             this.lbl_result.Click += new System.EventHandler(this.label1_Click);
@@ -142,14 +151,15 @@ namespace Dobbelsteenties
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.textBox1.Font = new System.Drawing.Font("Candara", 10.75F);
             this.textBox1.HideSelection = false;
-            this.textBox1.Location = new System.Drawing.Point(12, 192);
+            this.textBox1.Location = new System.Drawing.Point(15, 240);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(106, 125);
+            this.textBox1.Size = new System.Drawing.Size(132, 165);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Yahtzee\r\nGrote Straat\r\nKleine Straat\r\nFull House \r\nDrie Gelijke\r\nVier Gelijke\r\nKa" +
-    "ns";
+    "ns\r\n\r\nTotaal Score\r\n";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // vijfGelijkeLabel
@@ -157,9 +167,10 @@ namespace Dobbelsteenties
             this.vijfGelijkeLabel.AutoSize = true;
             this.vijfGelijkeLabel.BackColor = System.Drawing.Color.White;
             this.vijfGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.vijfGelijkeLabel.Location = new System.Drawing.Point(124, 194);
+            this.vijfGelijkeLabel.Location = new System.Drawing.Point(155, 242);
+            this.vijfGelijkeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.vijfGelijkeLabel.Name = "vijfGelijkeLabel";
-            this.vijfGelijkeLabel.Size = new System.Drawing.Size(16, 17);
+            this.vijfGelijkeLabel.Size = new System.Drawing.Size(20, 22);
             this.vijfGelijkeLabel.TabIndex = 8;
             this.vijfGelijkeLabel.Text = "0";
             this.vijfGelijkeLabel.Click += new System.EventHandler(this.label1_Click_1);
@@ -169,9 +180,10 @@ namespace Dobbelsteenties
             this.vierGelijkeLabel.AutoSize = true;
             this.vierGelijkeLabel.BackColor = System.Drawing.Color.White;
             this.vierGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.vierGelijkeLabel.Location = new System.Drawing.Point(124, 279);
+            this.vierGelijkeLabel.Location = new System.Drawing.Point(155, 349);
+            this.vierGelijkeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.vierGelijkeLabel.Name = "vierGelijkeLabel";
-            this.vierGelijkeLabel.Size = new System.Drawing.Size(16, 17);
+            this.vierGelijkeLabel.Size = new System.Drawing.Size(20, 22);
             this.vierGelijkeLabel.TabIndex = 9;
             this.vierGelijkeLabel.Text = "0";
             // 
@@ -180,9 +192,10 @@ namespace Dobbelsteenties
             this.hogeStraatLabel.AutoSize = true;
             this.hogeStraatLabel.BackColor = System.Drawing.Color.White;
             this.hogeStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.hogeStraatLabel.Location = new System.Drawing.Point(124, 211);
+            this.hogeStraatLabel.Location = new System.Drawing.Point(155, 264);
+            this.hogeStraatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hogeStraatLabel.Name = "hogeStraatLabel";
-            this.hogeStraatLabel.Size = new System.Drawing.Size(16, 17);
+            this.hogeStraatLabel.Size = new System.Drawing.Size(20, 22);
             this.hogeStraatLabel.TabIndex = 10;
             this.hogeStraatLabel.Text = "0";
             // 
@@ -191,9 +204,10 @@ namespace Dobbelsteenties
             this.lageStraatLabel.AutoSize = true;
             this.lageStraatLabel.BackColor = System.Drawing.Color.White;
             this.lageStraatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.lageStraatLabel.Location = new System.Drawing.Point(124, 228);
+            this.lageStraatLabel.Location = new System.Drawing.Point(155, 285);
+            this.lageStraatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lageStraatLabel.Name = "lageStraatLabel";
-            this.lageStraatLabel.Size = new System.Drawing.Size(16, 17);
+            this.lageStraatLabel.Size = new System.Drawing.Size(20, 22);
             this.lageStraatLabel.TabIndex = 11;
             this.lageStraatLabel.Text = "0";
             // 
@@ -202,9 +216,10 @@ namespace Dobbelsteenties
             this.fullHouseLabel.AutoSize = true;
             this.fullHouseLabel.BackColor = System.Drawing.Color.White;
             this.fullHouseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.fullHouseLabel.Location = new System.Drawing.Point(124, 245);
+            this.fullHouseLabel.Location = new System.Drawing.Point(155, 306);
+            this.fullHouseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fullHouseLabel.Name = "fullHouseLabel";
-            this.fullHouseLabel.Size = new System.Drawing.Size(16, 17);
+            this.fullHouseLabel.Size = new System.Drawing.Size(20, 22);
             this.fullHouseLabel.TabIndex = 12;
             this.fullHouseLabel.Text = "0";
             this.fullHouseLabel.Click += new System.EventHandler(this.fullHouseLabel_Click);
@@ -214,9 +229,10 @@ namespace Dobbelsteenties
             this.drieGelijkeLabel.AutoSize = true;
             this.drieGelijkeLabel.BackColor = System.Drawing.Color.White;
             this.drieGelijkeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.drieGelijkeLabel.Location = new System.Drawing.Point(124, 262);
+            this.drieGelijkeLabel.Location = new System.Drawing.Point(155, 328);
+            this.drieGelijkeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.drieGelijkeLabel.Name = "drieGelijkeLabel";
-            this.drieGelijkeLabel.Size = new System.Drawing.Size(16, 17);
+            this.drieGelijkeLabel.Size = new System.Drawing.Size(20, 22);
             this.drieGelijkeLabel.TabIndex = 13;
             this.drieGelijkeLabel.Text = "0";
             this.drieGelijkeLabel.Click += new System.EventHandler(this.drieGelijkeLabel_Click);
@@ -226,11 +242,13 @@ namespace Dobbelsteenties
             this.eindScoreLabel.AutoSize = true;
             this.eindScoreLabel.BackColor = System.Drawing.Color.White;
             this.eindScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.eindScoreLabel.Location = new System.Drawing.Point(92, 331);
+            this.eindScoreLabel.Location = new System.Drawing.Point(127, 416);
+            this.eindScoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.eindScoreLabel.Name = "eindScoreLabel";
-            this.eindScoreLabel.Size = new System.Drawing.Size(71, 17);
+            this.eindScoreLabel.Size = new System.Drawing.Size(20, 22);
             this.eindScoreLabel.TabIndex = 22;
-            this.eindScoreLabel.Text = "Eindscore";
+            this.eindScoreLabel.Tag = "";
+            this.eindScoreLabel.Text = "0";
             this.eindScoreLabel.Click += new System.EventHandler(this.eindScoreLabel_Click);
             // 
             // HoldButtonDice1
@@ -240,9 +258,10 @@ namespace Dobbelsteenties
             this.HoldButtonDice1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HoldButtonDice1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoldButtonDice1.ForeColor = System.Drawing.Color.Teal;
-            this.HoldButtonDice1.Location = new System.Drawing.Point(46, 120);
+            this.HoldButtonDice1.Location = new System.Drawing.Point(58, 150);
+            this.HoldButtonDice1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HoldButtonDice1.Name = "HoldButtonDice1";
-            this.HoldButtonDice1.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice1.Size = new System.Drawing.Size(134, 29);
             this.HoldButtonDice1.TabIndex = 27;
             this.HoldButtonDice1.Text = "Hold";
             this.HoldButtonDice1.UseVisualStyleBackColor = false;
@@ -255,9 +274,10 @@ namespace Dobbelsteenties
             this.HoldButtonDice2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HoldButtonDice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoldButtonDice2.ForeColor = System.Drawing.Color.Teal;
-            this.HoldButtonDice2.Location = new System.Drawing.Point(183, 119);
+            this.HoldButtonDice2.Location = new System.Drawing.Point(229, 149);
+            this.HoldButtonDice2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HoldButtonDice2.Name = "HoldButtonDice2";
-            this.HoldButtonDice2.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice2.Size = new System.Drawing.Size(134, 29);
             this.HoldButtonDice2.TabIndex = 26;
             this.HoldButtonDice2.Text = "Hold";
             this.HoldButtonDice2.UseVisualStyleBackColor = false;
@@ -270,9 +290,10 @@ namespace Dobbelsteenties
             this.HoldButtonDice3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HoldButtonDice3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoldButtonDice3.ForeColor = System.Drawing.Color.Teal;
-            this.HoldButtonDice3.Location = new System.Drawing.Point(326, 120);
+            this.HoldButtonDice3.Location = new System.Drawing.Point(408, 150);
+            this.HoldButtonDice3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HoldButtonDice3.Name = "HoldButtonDice3";
-            this.HoldButtonDice3.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice3.Size = new System.Drawing.Size(134, 29);
             this.HoldButtonDice3.TabIndex = 25;
             this.HoldButtonDice3.Text = "Hold";
             this.HoldButtonDice3.UseVisualStyleBackColor = false;
@@ -285,9 +306,10 @@ namespace Dobbelsteenties
             this.HoldButtonDice4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HoldButtonDice4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoldButtonDice4.ForeColor = System.Drawing.Color.Teal;
-            this.HoldButtonDice4.Location = new System.Drawing.Point(462, 120);
+            this.HoldButtonDice4.Location = new System.Drawing.Point(578, 150);
+            this.HoldButtonDice4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HoldButtonDice4.Name = "HoldButtonDice4";
-            this.HoldButtonDice4.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice4.Size = new System.Drawing.Size(134, 29);
             this.HoldButtonDice4.TabIndex = 24;
             this.HoldButtonDice4.Text = "Hold";
             this.HoldButtonDice4.UseVisualStyleBackColor = false;
@@ -300,9 +322,10 @@ namespace Dobbelsteenties
             this.HoldButtonDice5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HoldButtonDice5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoldButtonDice5.ForeColor = System.Drawing.Color.Teal;
-            this.HoldButtonDice5.Location = new System.Drawing.Point(603, 120);
+            this.HoldButtonDice5.Location = new System.Drawing.Point(754, 150);
+            this.HoldButtonDice5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.HoldButtonDice5.Name = "HoldButtonDice5";
-            this.HoldButtonDice5.Size = new System.Drawing.Size(107, 23);
+            this.HoldButtonDice5.Size = new System.Drawing.Size(134, 29);
             this.HoldButtonDice5.TabIndex = 23;
             this.HoldButtonDice5.Text = "Hold";
             this.HoldButtonDice5.UseVisualStyleBackColor = false;
@@ -311,9 +334,10 @@ namespace Dobbelsteenties
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkGreen;
-            this.button2.Location = new System.Drawing.Point(927, 498);
+            this.button2.Location = new System.Drawing.Point(1159, 622);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 58);
+            this.button2.Size = new System.Drawing.Size(155, 72);
             this.button2.TabIndex = 28;
             this.button2.Text = "Spelregels";
             this.button2.UseVisualStyleBackColor = false;
@@ -324,17 +348,19 @@ namespace Dobbelsteenties
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.label1.Location = new System.Drawing.Point(124, 296);
+            this.label1.Location = new System.Drawing.Point(155, 370);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 17);
+            this.label1.Size = new System.Drawing.Size(20, 22);
             this.label1.TabIndex = 29;
             this.label1.Text = "0";
             // 
             // Reset
             // 
-            this.Reset.Location = new System.Drawing.Point(927, 427);
+            this.Reset.Location = new System.Drawing.Point(1159, 534);
+            this.Reset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(124, 58);
+            this.Reset.Size = new System.Drawing.Size(155, 72);
             this.Reset.TabIndex = 30;
             this.Reset.Text = "Reset";
             this.Reset.UseVisualStyleBackColor = true;
@@ -344,23 +370,37 @@ namespace Dobbelsteenties
             // 
             this.aantalWorpenDisplay.Enabled = false;
             this.aantalWorpenDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F);
-            this.aantalWorpenDisplay.Location = new System.Drawing.Point(994, 12);
+            this.aantalWorpenDisplay.Location = new System.Drawing.Point(1242, 15);
+            this.aantalWorpenDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.aantalWorpenDisplay.Multiline = true;
             this.aantalWorpenDisplay.Name = "aantalWorpenDisplay";
-            this.aantalWorpenDisplay.Size = new System.Drawing.Size(57, 73);
+            this.aantalWorpenDisplay.Size = new System.Drawing.Size(70, 90);
             this.aantalWorpenDisplay.TabIndex = 31;
             this.aantalWorpenDisplay.Text = "0";
             this.aantalWorpenDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.aantalWorpenDisplay.TextChanged += new System.EventHandler(this.aantalWorpenDisplay_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(31, 421);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 17);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Totaal Score";
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1133, 613);
+            this.ClientSize = new System.Drawing.Size(1416, 766);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.aantalWorpenDisplay);
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.label1);
@@ -387,6 +427,7 @@ namespace Dobbelsteenties
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Dobbelen";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -433,6 +474,7 @@ namespace Dobbelsteenties
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Reset;
         private System.Windows.Forms.TextBox aantalWorpenDisplay;
+        private System.Windows.Forms.Label label2;
     }
 }
 

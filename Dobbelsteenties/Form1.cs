@@ -54,7 +54,7 @@ namespace Dobbelsteenties
         public Form1()
         {
             AantalWorpen = 3;
-
+            int  TotaalScore = 0;
 
             
             InitializeComponent();
@@ -231,14 +231,16 @@ namespace Dobbelsteenties
             }
 
             //Hier laat die dus zien welke resultaat je krijgt van de dobbelstenen
-
+            
 
             if (fiveKind)
             {
 
-                yahtzee = 50;
+               int  yahtzee = 50;
                 vijfGelijkeLabel.Text = Convert.ToString(yahtzee);
                 lbl_result.Text = Convert.ToString("Yahtzee!");
+               int TotaalScore = +yahtzee;
+                eindScoreLabel.Text = Convert.ToString(TotaalScore);
                 fiveKind = false;  
 
             }
@@ -246,34 +248,44 @@ namespace Dobbelsteenties
             {
                 vierGelijkeLabel.Text = Convert.ToString(vierGelijk);
                 lbl_result.Text = Convert.ToString("VierGelijk!");
+                int TotaalScore = +vierGelijk;
+                eindScoreLabel.Text = Convert.ToString(TotaalScore);
                 fourKind = false;
             }
             else if (highStraight)
             {
-                Hogestraat = 40;
+               int  Hogestraat = 40;
                 hogeStraatLabel.Text = Convert.ToString(Hogestraat);
                 lbl_result.Text = Convert.ToString("Hoge Straat!");
+                int TotaalScore = +Hogestraat;
+                eindScoreLabel.Text = Convert.ToString(TotaalScore);
                 highStraight = false;
 
             }
             else if (lowStraight)
             {
-                KleineStraat = 30;
+                int KleineStraat = 30;
                 lageStraatLabel.Text = Convert.ToString(KleineStraat);
                 lbl_result.Text = Convert.ToString("Kleine Straat!");
+                int TotaalScore = + KleineStraat;
+                eindScoreLabel.Text = Convert.ToString(TotaalScore);
                 lowStraight = false;
             }
             else if (fullHouse)
             {
-                fullhouse = 25;
+               int fullhouse = 25;
                 fullHouseLabel.Text = Convert.ToString(fullhouse);
                 lbl_result.Text = Convert.ToString("Fullhouse!");
+                int TotaalScore = + fullhouse;
+                eindScoreLabel.Text = Convert.ToString(TotaalScore);
                 fullHouse = false;
             }
             else if (threeKind)
             {
                 drieGelijkeLabel.Text = Convert.ToString(antwoord);
                 lbl_result.Text = "Drie Gelijke!";
+                int TotaalScore = + antwoord;
+                eindScoreLabel.Text = Convert.ToString(TotaalScore);
                 threeKind = false;
             }
         }
@@ -310,6 +322,21 @@ namespace Dobbelsteenties
         {
             
             
+        }
+
+        private void Dice5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aantalWorpenDisplay_TextChanged(object sender, EventArgs e)
+        {
+
         }
         #region hold button
         private void HoldButtonDice1_Click(object sender, EventArgs e)
@@ -403,6 +430,8 @@ namespace Dobbelsteenties
             lageStraatLabel.Text = "0";
             vijfGelijkeLabel.Text = "0";
             lbl_result.Text = "Gooien!";
+            eindScoreLabel.Text = "0";
+            aantalWorpenDisplay.Text = "3";
 
 
         }
@@ -456,6 +485,7 @@ namespace Dobbelsteenties
 
     }
 }
+
 
 
 
