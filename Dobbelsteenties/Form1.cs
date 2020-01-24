@@ -65,7 +65,7 @@ namespace Dobbelsteenties
 
         public Form1()
         {
-            AantalWorpen = 1;
+            AantalWorpen = 0;
             int TotaalScore;
 
             
@@ -95,11 +95,10 @@ namespace Dobbelsteenties
         }
         private void gooien_Click(object sender, EventArgs e)
         {
+            AantalWorpen = AantalWorpen + 1;
 
-            while (fiveKind == false)
+            if (AantalWorpen == 1)
             {
-                wait(50);
-                AantalWorpen = AantalWorpen + 1;
                 aantalWorpenDisplay.Text = Convert.ToString(AantalWorpen);
                 gemiddelde = TotaalScore / AantalWorpen;
                 gemiddel.Text = Convert.ToString(gemiddelde);
@@ -107,8 +106,9 @@ namespace Dobbelsteenties
                 RollDice();
                 GetResults();
                 ResetResults();
-                ScoreResults();              
+                ScoreResults();
             }
+
         }
 
         //Dit stukje code is dat wanneer je op "Gooien!" klikt dat er random dobbelstenen komen
@@ -475,13 +475,14 @@ namespace Dobbelsteenties
             timer1.Enabled = false;
             button1.Enabled = true;
             ResetResults();
-            AantalWorpen = 1;
+            AantalWorpen = 0;
             drieGelijkeLabel.Text = "0";
             vierGelijkeLabel.Text = "0";
             fullHouseLabel.Text = "0";
             hogeStraatLabel.Text = "0";
             lageStraatLabel.Text = "0";
             vijfGelijkeLabel.Text = "0";
+            label1.Text = "0";
             lbl_result.Text = "";
             lbl_result.Text = "Gooien!";
             eindScoreLabel.Text = "0";
