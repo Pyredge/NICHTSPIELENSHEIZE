@@ -58,6 +58,17 @@ namespace Dobbelsteenties
             this.aantalWorpenDisplay = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.YahtzeeX = new System.Windows.Forms.Label();
+            this.GrotestraatX = new System.Windows.Forms.Label();
+            this.KleinestraatX = new System.Windows.Forms.Label();
+            this.FullhouseX = new System.Windows.Forms.Label();
+            this.DrieGelijkX = new System.Windows.Forms.Label();
+            this.ViergelijkX = new System.Windows.Forms.Label();
+            this.KansX = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.AantalX = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.gemiddel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dice1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dice3)).BeginInit();
@@ -230,7 +241,7 @@ namespace Dobbelsteenties
             this.eindScoreLabel.AutoSize = true;
             this.eindScoreLabel.BackColor = System.Drawing.Color.White;
             this.eindScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.eindScoreLabel.Location = new System.Drawing.Point(102, 333);
+            this.eindScoreLabel.Location = new System.Drawing.Point(124, 324);
             this.eindScoreLabel.Name = "eindScoreLabel";
             this.eindScoreLabel.Size = new System.Drawing.Size(16, 17);
             this.eindScoreLabel.TabIndex = 22;
@@ -362,7 +373,7 @@ namespace Dobbelsteenties
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(25, 337);
+            this.label2.Location = new System.Drawing.Point(11, 328);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
@@ -372,8 +383,133 @@ namespace Dobbelsteenties
             // 
             // timer1
             // 
-            this.timer1.Interval = 10000;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.time1_Tick);
+            // 
+            // YahtzeeX
+            // 
+            this.YahtzeeX.AutoSize = true;
+            this.YahtzeeX.BackColor = System.Drawing.Color.White;
+            this.YahtzeeX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.YahtzeeX.Location = new System.Drawing.Point(286, 194);
+            this.YahtzeeX.Name = "YahtzeeX";
+            this.YahtzeeX.Size = new System.Drawing.Size(16, 17);
+            this.YahtzeeX.TabIndex = 33;
+            this.YahtzeeX.Text = "0";
+            // 
+            // GrotestraatX
+            // 
+            this.GrotestraatX.AutoSize = true;
+            this.GrotestraatX.BackColor = System.Drawing.Color.White;
+            this.GrotestraatX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.GrotestraatX.Location = new System.Drawing.Point(286, 211);
+            this.GrotestraatX.Name = "GrotestraatX";
+            this.GrotestraatX.Size = new System.Drawing.Size(16, 17);
+            this.GrotestraatX.TabIndex = 34;
+            this.GrotestraatX.Text = "0";
+            // 
+            // KleinestraatX
+            // 
+            this.KleinestraatX.AutoSize = true;
+            this.KleinestraatX.BackColor = System.Drawing.Color.White;
+            this.KleinestraatX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.KleinestraatX.Location = new System.Drawing.Point(286, 228);
+            this.KleinestraatX.Name = "KleinestraatX";
+            this.KleinestraatX.Size = new System.Drawing.Size(16, 17);
+            this.KleinestraatX.TabIndex = 35;
+            this.KleinestraatX.Text = "0";
+            // 
+            // FullhouseX
+            // 
+            this.FullhouseX.AutoSize = true;
+            this.FullhouseX.BackColor = System.Drawing.Color.White;
+            this.FullhouseX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.FullhouseX.Location = new System.Drawing.Point(286, 245);
+            this.FullhouseX.Name = "FullhouseX";
+            this.FullhouseX.Size = new System.Drawing.Size(16, 17);
+            this.FullhouseX.TabIndex = 36;
+            this.FullhouseX.Text = "0";
+            // 
+            // DrieGelijkX
+            // 
+            this.DrieGelijkX.AutoSize = true;
+            this.DrieGelijkX.BackColor = System.Drawing.Color.White;
+            this.DrieGelijkX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.DrieGelijkX.Location = new System.Drawing.Point(286, 262);
+            this.DrieGelijkX.Name = "DrieGelijkX";
+            this.DrieGelijkX.Size = new System.Drawing.Size(16, 17);
+            this.DrieGelijkX.TabIndex = 37;
+            this.DrieGelijkX.Text = "0";
+            // 
+            // ViergelijkX
+            // 
+            this.ViergelijkX.AutoSize = true;
+            this.ViergelijkX.BackColor = System.Drawing.Color.White;
+            this.ViergelijkX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.ViergelijkX.Location = new System.Drawing.Point(286, 279);
+            this.ViergelijkX.Name = "ViergelijkX";
+            this.ViergelijkX.Size = new System.Drawing.Size(16, 17);
+            this.ViergelijkX.TabIndex = 38;
+            this.ViergelijkX.Text = "0";
+            // 
+            // KansX
+            // 
+            this.KansX.AutoSize = true;
+            this.KansX.BackColor = System.Drawing.Color.White;
+            this.KansX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.KansX.Location = new System.Drawing.Point(286, 296);
+            this.KansX.Name = "KansX";
+            this.KansX.Size = new System.Drawing.Size(16, 17);
+            this.KansX.TabIndex = 39;
+            this.KansX.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(194, 328);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Totaal gegooid";
+            // 
+            // AantalX
+            // 
+            this.AantalX.AutoSize = true;
+            this.AantalX.BackColor = System.Drawing.Color.White;
+            this.AantalX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.AantalX.Location = new System.Drawing.Point(286, 324);
+            this.AantalX.Name = "AantalX";
+            this.AantalX.Size = new System.Drawing.Size(16, 17);
+            this.AantalX.TabIndex = 41;
+            this.AantalX.Tag = "";
+            this.AantalX.Text = "0";
+            this.AantalX.Click += new System.EventHandler(this.AantalX_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(11, 386);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 13);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "Gemiddelde punten per worp";
+            // 
+            // gemiddel
+            // 
+            this.gemiddel.AutoSize = true;
+            this.gemiddel.BackColor = System.Drawing.Color.White;
+            this.gemiddel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.gemiddel.Location = new System.Drawing.Point(161, 383);
+            this.gemiddel.Name = "gemiddel";
+            this.gemiddel.Size = new System.Drawing.Size(16, 17);
+            this.gemiddel.TabIndex = 43;
+            this.gemiddel.Tag = "";
+            this.gemiddel.Text = "0";
             // 
             // Form1
             // 
@@ -384,6 +520,17 @@ namespace Dobbelsteenties
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1133, 613);
+            this.Controls.Add(this.gemiddel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.AantalX);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.KansX);
+            this.Controls.Add(this.ViergelijkX);
+            this.Controls.Add(this.DrieGelijkX);
+            this.Controls.Add(this.FullhouseX);
+            this.Controls.Add(this.KleinestraatX);
+            this.Controls.Add(this.GrotestraatX);
+            this.Controls.Add(this.YahtzeeX);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.aantalWorpenDisplay);
             this.Controls.Add(this.Reset);
@@ -458,7 +605,18 @@ namespace Dobbelsteenties
         private System.Windows.Forms.Button Reset;
         private System.Windows.Forms.TextBox aantalWorpenDisplay;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label YahtzeeX;
+        private System.Windows.Forms.Label GrotestraatX;
+        private System.Windows.Forms.Label KleinestraatX;
+        private System.Windows.Forms.Label FullhouseX;
+        private System.Windows.Forms.Label DrieGelijkX;
+        private System.Windows.Forms.Label ViergelijkX;
+        private System.Windows.Forms.Label KansX;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label AantalX;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label gemiddel;
     }
 }
 

@@ -10,20 +10,30 @@ using System.Windows.Forms;
 using System.Resources;
 using System.Timers;
 using System.IO;
+using System.Diagnostics;
+
 namespace Dobbelsteenties
 {
     public partial class Form1 : Form
     {
         #region de ints bool and strings,
+        int gemiddelde;
+        int FGX;
+        int GTX;
+        int KSX;
+        int FHX;
+        int DGX;
+        int VGX;
+        int kansX;
         int Hogestraat;
         int KleineStraat;
         int TotaalScore;
         int fullhouse;
         int AantalWorpen;
         int antwoord;
-        int eenPaar;
         int yahtzee;
         int vierGelijk;
+        int chance;
         bool HoldConditionDice1;
         bool HoldConditionDice2;
         bool HoldConditionDice3;
@@ -55,8 +65,8 @@ namespace Dobbelsteenties
 
         public Form1()
         {
-            AantalWorpen = 3;
-            int  TotaalScore = 0;
+            AantalWorpen = 1;
+            int TotaalScore;
 
             
             InitializeComponent();
@@ -64,27 +74,41 @@ namespace Dobbelsteenties
         int[] diceResults;
 
         // Ik heb dit hier zo aangemaakt, zodat wanneer je op de knop "gooien!" klikt dat die die codes kan uitvoeren allemaal.
-
+        public void wait(int milliseconds)
+        {
+            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+            //Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                //Console.WriteLine("stop wait timer");
+            };
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
+        }
         private void gooien_Click(object sender, EventArgs e)
         {
-            
-                timer1.Enabled = true;
+
+            while (fiveKind == false)
+            {
+                wait(50);
+                AantalWorpen = AantalWorpen + 1;
+                aantalWorpenDisplay.Text = Convert.ToString(AantalWorpen);
+                gemiddelde = TotaalScore / AantalWorpen;
+                gemiddel.Text = Convert.ToString(gemiddelde);
+                AantalX.Text = Convert.ToString(FGX + GTX + KSX + FHX + DGX + VGX + kansX);
                 RollDice();
                 GetResults();
                 ResetResults();
-                ScoreResults();
-            
-                aantalWorpenDisplay.Text = Convert.ToString(AantalWorpen);
-                if (AantalWorpen > 0)
-                {
-                    AantalWorpen = AantalWorpen - 1;
-                }
-
-                else
-                {
-                    button1.Enabled = false;
-
-                } 
+                ScoreResults();              
+            }
         }
 
         //Dit stukje code is dat wanneer je op "Gooien!" klikt dat er random dobbelstenen komen
@@ -204,6 +228,11 @@ namespace Dobbelsteenties
                             twoPair = true;
                     }
                 }
+                else if (fiveKind == false && fourKind == false && highStraight == false && lowStraight == false && threeKind == false)
+                {
+                    kans = true;
+                    chance = dice1 + dice2 + dice3 + dice4 + dice5;
+                }
             }
 
             for (int i = 0; i < dice.Length; i++)
@@ -237,17 +266,20 @@ namespace Dobbelsteenties
 
             if (fiveKind)
             {
-
+                FGX += 1;
+                YahtzeeX.Text = Convert.ToString(FGX);
                 yahtzee = 50;
                 vijfGelijkeLabel.Text = Convert.ToString(yahtzee);
                 lbl_result.Text = Convert.ToString("Yahtzee!");
                 TotaalScore += yahtzee;
                 eindScoreLabel.Text = Convert.ToString(TotaalScore);
-                fiveKind = false;  
+                 
 
             }
             else if (fourKind)
             {
+                VGX += 1;
+                ViergelijkX.Text = Convert.ToString(VGX);
                 vierGelijkeLabel.Text = Convert.ToString(vierGelijk);
                 lbl_result.Text = Convert.ToString("VierGelijk!");
                 TotaalScore += vierGelijk;
@@ -256,6 +288,8 @@ namespace Dobbelsteenties
             }
             else if (highStraight)
             {
+                GTX += 1;
+                GrotestraatX.Text = Convert.ToString(GTX);
                 Hogestraat = 40;
                 hogeStraatLabel.Text = Convert.ToString(Hogestraat);
                 lbl_result.Text = Convert.ToString("Hoge Straat!");
@@ -266,6 +300,8 @@ namespace Dobbelsteenties
             }
             else if (lowStraight)
             {
+                KSX += 1;
+                KleinestraatX.Text = Convert.ToString(KSX);
                 KleineStraat = 30;
                 lageStraatLabel.Text = Convert.ToString(KleineStraat);
                 lbl_result.Text = Convert.ToString("Kleine Straat!");
@@ -275,6 +311,8 @@ namespace Dobbelsteenties
             }
             else if (fullHouse)
             {
+                FHX += 1;
+                FullhouseX.Text = Convert.ToString(FHX);
                 fullhouse = 25;
                 fullHouseLabel.Text = Convert.ToString(fullhouse);
                 lbl_result.Text = Convert.ToString("Fullhouse!");
@@ -284,11 +322,22 @@ namespace Dobbelsteenties
             }
             else if (threeKind)
             {
+                DGX += 1;
+                DrieGelijkX.Text = Convert.ToString(DGX);
                 drieGelijkeLabel.Text = Convert.ToString(antwoord);
                 lbl_result.Text = "Drie Gelijke!";
                 TotaalScore += antwoord;
                 eindScoreLabel.Text = Convert.ToString(TotaalScore);
                 threeKind = false;
+            }
+            else if (kans)
+            {
+                kansX += 1;
+                KansX.Text = Convert.ToString(kansX);
+                TotaalScore += chance;
+                label1.Text = Convert.ToString(chance);
+                lbl_result.Text = "Kans!";
+                kans = false;
             }
         }
 
@@ -388,6 +437,12 @@ namespace Dobbelsteenties
                 HoldButtonDice4.ForeColor = Color.Teal; //De button gaat terug naar zijn neutrale kleur, en de gebruiker weet dat het dobbelsteen niet meer wordt gehouden.
             }
         }
+
+        private void AantalX_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void HoldButtonDice5_Click(object sender, EventArgs e)
         {
             if (HoldConditionDice5 == false)
@@ -409,19 +464,28 @@ namespace Dobbelsteenties
         #region reset knop
         private void Reset_Click(object sender, EventArgs e)
         {
+            FGX = 0;
+            GTX = 0;
+            KSX = 0;
+            FHX = 0;
+            DGX = 0;
+            VGX = 0;
+            kansX = 0;
+
             timer1.Enabled = false;
             button1.Enabled = true;
             ResetResults();
-            AantalWorpen = 3;
+            AantalWorpen = 1;
             drieGelijkeLabel.Text = "0";
             vierGelijkeLabel.Text = "0";
             fullHouseLabel.Text = "0";
             hogeStraatLabel.Text = "0";
             lageStraatLabel.Text = "0";
             vijfGelijkeLabel.Text = "0";
+            lbl_result.Text = "";
             lbl_result.Text = "Gooien!";
             eindScoreLabel.Text = "0";
-            aantalWorpenDisplay.Text = "3";
+            aantalWorpenDisplay.Text = Convert.ToString(AantalWorpen);
             TotaalScore = 0;
 
 
